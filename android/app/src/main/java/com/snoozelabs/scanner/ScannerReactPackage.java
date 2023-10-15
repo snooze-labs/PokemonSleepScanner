@@ -1,4 +1,4 @@
-package com.pokemonsleepscanner;
+package com.snoozelabs.scanner;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
