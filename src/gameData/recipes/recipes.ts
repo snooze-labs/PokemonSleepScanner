@@ -1,28 +1,18 @@
-import { IngredientID } from '../ingredients/ingredients';
-import { FixedArray } from '../commonTypes';
 import { CurryRecipeID, CurryRecipes } from './curries/curries';
 import { DessertRecipeID, DessertRecipes } from './desserts/desserts';
 import { SaladRecipeID, SaladRecipes } from './salads/salads';
+import { IRecipeData } from './types';
 
 /**
- * Types of recipes.
+ * All known recipe IDs.
  */
-export enum RecipeType {
-  Curry = 'Curry',
-  Dessert = 'Dessert',
-  Salad = 'Salad',
-}
+export type RecipeID = CurryRecipeID | DessertRecipeID | SaladRecipeID;
 
-export interface IRecipeData {
-  name: string;
-  description: string;
-  type: RecipeType;
-  ingredients: { [key in IngredientID]?: number };
-  strengthLevels: FixedArray<number, 50>;
-}
-
+/**
+ * Map of all known recipes.
+ */
 export const Recipes: {
-  [key in CurryRecipeID | DessertRecipeID | SaladRecipeID]: IRecipeData;
+  [key in RecipeID]: IRecipeData;
 } = {
   ...CurryRecipes,
   ...DessertRecipes,

@@ -1,5 +1,5 @@
 import { IngredientID } from '../../ingredients/ingredients';
-import { IRecipeData, RecipeType } from '../recipes';
+import { IRecipeData, RecipeType } from '../types';
 
 /**
  * All known salad recipe IDs.
@@ -49,6 +49,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       1641, 1676, 1711, 1746, 1781, 1816, 1859, 1894, 1938, 1982, 2025, 2069,
       2113,
     ],
+    imageSrc: require('./assets/beanhamsalad.png'),
   },
   [SaladRecipeID.ContraryChocolateMeatSalad]: {
     name: 'Contrary Chocolate Meat Salad',
@@ -66,6 +67,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       6547, 6689, 6831, 6974, 7116, 7258, 7401, 7579, 7721, 7899, 8077, 8255,
       8432, 8610,
     ],
+    imageSrc: require('./assets/contrarychocolatemeatsalad.png'),
   },
   [SaladRecipeID.DazzlingAppleCheeseSalad]: {
     name: 'Dazzling Apple Cheese Salad',
@@ -84,6 +86,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       4744, 4847, 4950, 5053, 5156, 5259, 5362, 5491, 5594, 5723, 5852, 5981,
       6110, 6239,
     ],
+    imageSrc: require('./assets/dazzlingapplecheesesalad.png'),
   },
   [SaladRecipeID.FancyAppleSalad]: {
     name: 'Fancy Apple Salad',
@@ -98,6 +101,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       1183, 1206, 1228, 1251, 1274, 1297, 1328, 1351, 1381, 1404, 1434, 1465,
       1495, 1526, 1557, 1587, 1625, 1656, 1694, 1732, 1770, 1808, 1846,
     ],
+    imageSrc: require('./assets/fancyapplesalad.png'),
   },
   [SaladRecipeID.GluttonyPotatoSalad]: {
     name: 'Gluttony Potato Salad',
@@ -117,6 +121,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       9274, 9475, 9677, 9878, 10080, 10282, 10483, 10735, 10937, 11189, 11441,
       11693, 11945, 12197,
     ],
+    imageSrc: require('./assets/gluttonypotatosalad.png'),
   },
   [SaladRecipeID.HeatWaveTofuSalad]: {
     name: 'Heat Wave Tofu Salad',
@@ -133,6 +138,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       3636, 3715, 3794, 3873, 3952, 4031, 4110, 4209, 4288, 4387, 4486, 4584,
       4683, 4782,
     ],
+    imageSrc: require('./assets/heatwavetofusalad.png'),
   },
   [SaladRecipeID.ImmunityLeekSalad]: {
     name: 'Immunity Leek Salad',
@@ -150,6 +156,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       4891, 4997, 5103, 5210, 5316, 5422, 5529, 5662, 5768, 5901, 6034, 6167,
       6299, 6432,
     ],
+    imageSrc: require('./assets/immunityleeksalad.png'),
   },
   [SaladRecipeID.MixedSalad]: {
     name: 'Mixed Salad',
@@ -160,6 +167,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ],
+    imageSrc: require('./assets/mixedsalad.png'),
   },
   [SaladRecipeID.MoomooCapreseSalad]: {
     name: 'Moomoo Caprese Salad',
@@ -178,6 +186,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       5255, 5369, 5484, 5598, 5712, 5826, 5940, 6083, 6198, 6340, 6483, 6626,
       6769, 6912,
     ],
+    imageSrc: require('./assets/moomoocapresesalad.png'),
   },
   [SaladRecipeID.NinjaSalad]: {
     name: 'Ninja Salad',
@@ -197,6 +206,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       16556, 16859, 17162, 17565, 17868, 18272, 18575, 18979, 19382, 19786,
       20190, 20594, 20998, 21502, 21906, 22411, 22916, 23420, 23925, 24430,
     ],
+    imageSrc: require('./assets/ninjasalad.png'),
   },
   [SaladRecipeID.OverheatGingerSalad]: {
     name: 'Overheat Ginger Salad',
@@ -215,6 +225,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       9614, 9823, 10032, 10241, 10450, 10659, 10868, 11129, 11338, 11600, 11861,
       12122, 12383, 12645,
     ],
+    imageSrc: require('./assets/overheatgingersalad.png'),
   },
   [SaladRecipeID.SlowpokeTailPepperSalad]: {
     name: 'Slowpoke Tail Pepper Salad',
@@ -233,6 +244,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       13887, 14214, 14459, 14786, 15031, 15358, 15684, 16011, 16338, 16665,
       16992, 17400, 17727, 18135, 18544, 18952, 19361, 19769,
     ],
+    imageSrc: require('./assets/slowpoketailpeppersalad.png'),
   },
   [SaladRecipeID.SnoozyTomatoSalad]: {
     name: 'Snoozy Tomato Salad',
@@ -249,6 +261,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       1754, 1791, 1829, 1866, 1903, 1941, 1987, 2025, 2071, 2118, 2165, 2211,
       2258,
     ],
+    imageSrc: require('./assets/snoozytomatosalad.png'),
   },
   [SaladRecipeID.SnowCloakCaesarSalad]: {
     name: 'Snow Cloak Caesar Salad',
@@ -266,6 +279,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       3264, 3335, 3406, 3477, 3548, 3619, 3690, 3779, 3850, 3938, 4027, 4116,
       4204, 4293,
     ],
+    imageSrc: require('./assets/snowcloakcaesarsalad.png'),
   },
   [SaladRecipeID.SporeMushroomSalad]: {
     name: 'Spore Mushroom Salad',
@@ -283,6 +297,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       10781, 11015, 11249, 11484, 11718, 11952, 12187, 12480, 12714, 13007,
       13300, 13593, 13886, 14179,
     ],
+    imageSrc: require('./assets/sporemushroomsalad.png'),
   },
   [SaladRecipeID.SuperpowerExtremeSalad]: {
     name: 'Superpower Extreme Salad',
@@ -302,6 +317,7 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       5443, 5561, 5679, 5798, 5916, 6034, 6153, 6301, 6419, 6567, 6715, 6863,
       7010, 7158,
     ],
+    imageSrc: require('./assets/superpowerextremesalad.png'),
   },
   [SaladRecipeID.WaterVeilTofuSalad]: {
     name: 'Water Veil Tofu Salad',
@@ -318,5 +334,6 @@ export const SaladRecipes: { [key in SaladRecipeID]: ISaladRecipeData } = {
       3391, 3465, 3539, 3612, 3686, 3760, 3833, 3926, 3999, 4091, 4184, 4276,
       4368, 4460,
     ],
+    imageSrc: require('./assets/waterveiltofusalad.png'),
   },
 };

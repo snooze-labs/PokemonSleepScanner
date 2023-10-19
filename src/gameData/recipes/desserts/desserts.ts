@@ -1,5 +1,5 @@
 import { IngredientID } from '../../ingredients/ingredients';
-import { IRecipeData, RecipeType } from '../recipes';
+import { IRecipeData, RecipeType } from '../types';
 
 /**
  * All known dessert recipe IDs.
@@ -53,6 +53,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         5386, 5503, 5620, 5737, 5854, 5971, 6088, 6235, 6352, 6498, 6644, 6791,
         6937, 7083,
       ],
+      imageSrc: require('./assets/bigmalasada.png'),
     },
     [DessertRecipeID.CloudNineSoyCake]: {
       name: 'Cloud Nine Soy Cake',
@@ -69,6 +70,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         3308, 3380, 3452, 3524, 3596, 3668, 3740, 3830, 3902, 3992, 4081, 4171,
         4261, 4351,
       ],
+      imageSrc: require('./assets/cloudninesoycake.png'),
     },
     [DessertRecipeID.CraftSodaPop]: {
       name: 'Craft Soda Pop',
@@ -84,6 +86,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         1774, 1812, 1851, 1889, 1928, 1967, 2005, 2053, 2092, 2140, 2188, 2236,
         2285, 2333,
       ],
+      imageSrc: require('./assets/craftsodapop.png'),
     },
     [DessertRecipeID.EmberGingerTea]: {
       name: 'Ember Ginger Tea',
@@ -101,6 +104,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         3290, 3361, 3433, 3504, 3576, 3648, 3719, 3808, 3880, 3969, 4059, 4148,
         4238, 4327,
       ],
+      imageSrc: require('./assets/embergingertea.png'),
     },
     [DessertRecipeID.FancyAppleJuice]: {
       name: 'Fancy Apple Juice',
@@ -115,6 +119,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         1160, 1183, 1206, 1228, 1251, 1274, 1297, 1328, 1351, 1381, 1404, 1434,
         1465, 1495, 1526, 1557, 1587, 1625, 1656, 1694, 1732, 1770, 1808, 1846,
       ],
+      imageSrc: require('./assets/fancyapplejuice.png'),
     },
     [DessertRecipeID.FluffySweetPotatoes]: {
       name: 'Fluffy Sweet Potatoes',
@@ -132,6 +137,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         3281, 3352, 3423, 3495, 3566, 3637, 3709, 3798, 3869, 3958, 4047, 4137,
         4226, 4315,
       ],
+      imageSrc: require('./assets/fluffysweetpotatoes.png'),
     },
     [DessertRecipeID.HugePowerSoyDonuts]: {
       name: 'Huge Power Soy Donuts',
@@ -150,6 +156,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         5912, 6040, 6169, 6297, 6426, 6555, 6683, 6844, 6972, 7133, 7294, 7454,
         7615, 7775,
       ],
+      imageSrc: require('./assets/hugepowersoydonuts.png'),
     },
     [DessertRecipeID.HustleProteinSmoothie]: {
       name: 'Hustle Protein Smoothie',
@@ -167,6 +174,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         5829, 5956, 6083, 6209, 6336, 6463, 6589, 6748, 6875, 7033, 7191, 7350,
         7508, 7667,
       ],
+      imageSrc: require('./assets/hustleproteinsmoothie.png'),
     },
     [DessertRecipeID.JigglyPuffsFruityFlan]: {
       name: "Jigglypuff's Fruity Flan",
@@ -185,6 +193,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         13214, 13441, 13745, 13973, 14277, 14580, 14884, 15188, 15492, 15796,
         16175, 16479, 16859, 17238, 17618, 17998, 18377,
       ],
+      imageSrc: require("./assets/jigglypuff'sfruityflan.png"),
     },
     [DessertRecipeID.LovelyKissSmoothie]: {
       name: 'Lovely Kiss Smoothie',
@@ -204,6 +213,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         8711, 8900, 9089, 9279, 9468, 9657, 9847, 10083, 10273, 10509, 10746,
         10983, 11220, 11456,
       ],
+      imageSrc: require('./assets/lovelykisssmoothie.png'),
     },
     [DessertRecipeID.LuckyChantApplePie]: {
       name: 'Lucky Chant Apple Pie',
@@ -220,6 +230,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         3007, 3072, 3137, 3203, 3268, 3333, 3399, 3480, 3546, 3627, 3709, 3791,
         3873, 3954,
       ],
+      imageSrc: require('./assets/luckychantapplepie.png'),
     },
     [DessertRecipeID.MixedJuice]: {
       name: 'Mixed Juice',
@@ -231,6 +242,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0,
       ],
+      imageSrc: require('./assets/mixedjuice.png'),
     },
     [DessertRecipeID.NerolisRestorativeTea]: {
       name: "Neroli's Restorative Tea",
@@ -248,6 +260,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         9320, 9522, 9725, 9927, 10130, 10333, 10535, 10788, 10991, 11244, 11498,
         11751, 12004, 12257,
       ],
+      imageSrc: require("./assets/neroli'srestorativetea.png"),
     },
     [DessertRecipeID.StalwartVegetableJuice]: {
       name: 'Stalwart Vegetable Juice',
@@ -264,6 +277,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         3308, 3380, 3452, 3524, 3596, 3668, 3740, 3830, 3902, 3992, 4081, 4171,
         4261, 4351,
       ],
+      imageSrc: require('./assets/stalwartvegetablejuice.png'),
     },
     [DessertRecipeID.SteadfastGingerCookies]: {
       name: 'Steadfast Ginger Cookies',
@@ -283,6 +297,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         9055, 9251, 9448, 9645, 9842, 10039, 10236, 10482, 10679, 10925, 11171,
         11417, 11663, 11909,
       ],
+      imageSrc: require('./assets/steadfastgingercookies.png'),
     },
     [DessertRecipeID.SweetScentChocolateCake]: {
       name: 'Sweet Scent Chocolate Cake',
@@ -301,6 +316,7 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         6035, 6166, 6298, 6429, 6560, 6691, 6822, 6986, 7118, 7282, 7446, 7610,
         7774, 7938,
       ],
+      imageSrc: require('./assets/sweetscentchocolatecake.png'),
     },
     [DessertRecipeID.WarmMoomooMilk]: {
       name: 'Warm Moomoo Milk',
@@ -316,5 +332,6 @@ export const DessertRecipes: { [key in DessertRecipeID]: IDessertRecipeData } =
         1127, 1149, 1170, 1192, 1214, 1236, 1265, 1287, 1316, 1338, 1367, 1396,
         1425, 1454, 1483, 1512, 1549, 1578, 1614, 1650, 1687, 1723, 1759,
       ],
+      imageSrc: require('./assets/warmmoomoomilk.png'),
     },
   };

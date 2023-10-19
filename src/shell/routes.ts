@@ -12,6 +12,7 @@ export type ScreenNavigatorType = NativeStackNavigationProp<{
 export enum TabbedScreen {
   PokemonBox = 'PokemonBox',
   PokemonCompare = 'PokemonCompare',
+  Cooking = 'Cooking',
   Settings = 'Settings',
 }
 

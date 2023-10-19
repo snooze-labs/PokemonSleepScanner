@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { PokemonBoxScreen } from '../screens/pokemonBox/pokemonBoxScreen';
 import { PokemonCompareScreen } from '../screens/pokemonCompare/pokemonCompareScreen';
@@ -14,6 +15,8 @@ import styles from './styles';
 import AddPokemonForm from '../screens/pokemonBox/addPokemonForm';
 import { Screen, TabbedScreen } from './routes';
 import { GlobalStateContextProvider } from '../globalStateContext';
+import { CookingScreen } from '../screens/cooking/cookingScreen';
+import { RecipeList } from '../screens/cooking/recipeList';
 
 const navTheme = {
   ...DefaultTheme,
@@ -50,6 +53,16 @@ function MainContent() {
             <MaterialIcons name="compare" color={color} size={26} />
           ),
           tabBarLabel: 'Compare',
+        }}
+      />
+      <Tab.Screen
+        name={TabbedScreen.Cooking}
+        component={CookingScreen}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="pot-mix" color={color} size={26} />
+          ),
+          tabBarLabel: 'Cooking',
         }}
       />
       <Tab.Screen

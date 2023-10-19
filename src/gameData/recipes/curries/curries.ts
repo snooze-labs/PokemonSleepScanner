@@ -1,5 +1,5 @@
 import { IngredientID } from '../../ingredients/ingredients';
-import { IRecipeData, RecipeType } from '../recipes';
+import { IRecipeData, RecipeType } from '../types';
 
 /**
  * All known curry IDs.
@@ -49,6 +49,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       1184, 1207, 1230, 1253, 1276, 1299, 1329, 1352, 1383, 1406, 1436, 1467,
       1497, 1528, 1559, 1589, 1627, 1658, 1696, 1734, 1772, 1811, 1849,
     ],
+    imageSrc: require('./assets/beanburgercurry.png'),
   },
   [CurryRecipeID.BulkUpBean]: {
     name: 'Bulk Up Bean Curry',
@@ -67,6 +68,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       6024, 6155, 6286, 6417, 6548, 6679, 6810, 6974, 7105, 7268, 7432, 7596,
       7759, 7923,
     ],
+    imageSrc: require('./assets/bulkupbeancurry.png'),
   },
   [CurryRecipeID.DreamEaterButter]: {
     name: 'Dream Eater Butter Curry',
@@ -86,6 +88,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       15047, 15317, 15677, 15948, 16308, 16578, 16939, 17299, 17660, 18020,
       18380, 18741, 19191, 19552, 20002, 20453, 20903, 21354, 21804,
     ],
+    imageSrc: require('./assets/dreameaterbuttercurry.png'),
   },
   [CurryRecipeID.DroughtKatsu]: {
     name: 'Drought Katsu Curry',
@@ -102,6 +105,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       3340, 3412, 3485, 3557, 3630, 3703, 3775, 3866, 3939, 4029, 4120, 4211,
       4302, 4392,
     ],
+    imageSrc: require('./assets/droughtkatsucurry.png'),
   },
   [CurryRecipeID.EggBomb]: {
     name: 'Egg Bomb Curry',
@@ -121,6 +125,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       8322, 8503, 8684, 8865, 9046, 9227, 9408, 9634, 9815, 10041, 10267, 10493,
       10720, 10946,
     ],
+    imageSrc: require('./assets/eggbombcurry.png'),
   },
   [CurryRecipeID.FancyApple]: {
     name: 'Fancy Apple Curry',
@@ -136,6 +141,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       1075, 1096, 1116, 1136, 1162, 1182, 1209, 1229, 1256, 1283, 1309, 1336,
       1363, 1389, 1423, 1450, 1483, 1516, 1550, 1583, 1617,
     ],
+    imageSrc: require('./assets/fancyapplecurry.png'),
   },
   [CurryRecipeID.GrilledTail]: {
     name: 'Grilled Tail Curry',
@@ -153,6 +159,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       13020, 13245, 13544, 13769, 14068, 14367, 14667, 14966, 15265, 15565,
       15939, 16238, 16612, 16986, 17361, 17735, 18109,
     ],
+    imageSrc: require('./assets/grilledtailcurry.png'),
   },
   [CurryRecipeID.HeartyCheeseburger]: {
     name: 'Hearty Cheeseburger Curry',
@@ -170,6 +177,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       3284, 3356, 3427, 3499, 3570, 3641, 3713, 3802, 3873, 3963, 4052, 4141,
       4230, 4320,
     ],
+    imageSrc: require('./assets/heartycheeseburgercurry.png'),
   },
   [CurryRecipeID.MeltyOmelette]: {
     name: 'Melty Omelette Curry',
@@ -187,6 +195,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       3697, 3777, 3857, 3938, 4018, 4098, 4179, 4279, 4360, 4460, 4560, 4661,
       4761, 4862,
     ],
+    imageSrc: require('./assets/meltyomelettecurry.png'),
   },
   [CurryRecipeID.MildHoney]: {
     name: 'Mild Honey Curry',
@@ -202,6 +211,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       1183, 1206, 1228, 1251, 1273, 1303, 1326, 1356, 1378, 1408, 1438, 1468,
       1498, 1528, 1558, 1595, 1625, 1663, 1700, 1738, 1775, 1813,
     ],
+    imageSrc: require('./assets/mildhoneycurry.png'),
   },
   [CurryRecipeID.Mixed]: {
     name: 'Mixed Curry',
@@ -212,6 +222,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ],
+    imageSrc: require('./assets/mixedcurry.png'),
   },
   [CurryRecipeID.Ninja]: {
     name: 'Ninja Curry',
@@ -231,6 +242,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       11148, 11333, 11579, 11825, 12072, 12318, 12564, 12811, 13119, 13365,
       13673, 13981, 14289, 14597, 14905,
     ],
+    imageSrc: require('./assets/ninjacurry.png'),
   },
   [CurryRecipeID.SimpleChowder]: {
     name: 'Simple Chowder',
@@ -246,6 +258,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       1149, 1170, 1192, 1214, 1236, 1265, 1287, 1316, 1338, 1367, 1396, 1425,
       1454, 1483, 1512, 1549, 1578, 1614, 1650, 1687, 1723, 1759,
     ],
+    imageSrc: require('./assets/simplechowder.png'),
   },
   [CurryRecipeID.SoftPotatoChowder]: {
     name: 'Soft Potato Chowder',
@@ -264,6 +277,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       5684, 5807, 5931, 6054, 6178, 6302, 6425, 6580, 6703, 6858, 7012, 7166,
       7321, 7475,
     ],
+    imageSrc: require('./assets/softpotatochowder.png'),
   },
   [CurryRecipeID.SolarPowerTomato]: {
     name: 'Solar Power Tomato Curry',
@@ -281,6 +295,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       3575, 3653, 3731, 3808, 3886, 3964, 4041, 4139, 4216, 4313, 4411, 4508,
       4605, 4702,
     ],
+    imageSrc: require('./assets/solarpowertomatocurry.png'),
   },
   [CurryRecipeID.SpicyLeek]: {
     name: 'Spicy Leek Curry',
@@ -299,6 +314,7 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       10679, 10856, 11092, 11328, 11564, 11800, 12036, 12272, 12567, 12803,
       13098, 13393, 13688, 13983, 14278,
     ],
+    imageSrc: require('./assets/spicyleekcurry.png'),
   },
   [CurryRecipeID.SporeMushroom]: {
     name: 'Spore Mushroom Curry',
@@ -316,5 +332,6 @@ export const CurryRecipes: { [key in CurryRecipeID]: ICurryRecipeData } = {
       7435, 7597, 7759, 7920, 8082, 8244, 8405, 8607, 8769, 8971, 9173, 9375,
       9577, 9779,
     ],
+    imageSrc: require('./assets/sporemushroomcurry.png'),
   },
 };
