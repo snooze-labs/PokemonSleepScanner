@@ -231,8 +231,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/ivysaur_original.png'),
+    imageSrcShiny: require('./assets/ivysaur_shiny.png'),
   },
   [PokemonID.Venusaur]: {
     name: 'Venusaur',
@@ -256,8 +256,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1033,
     description:
       "This Pokémon emits a pleasant fragrance from the flower on its back as it sleeps. You may sometimes see a Venusaur that's forgotten to retract its long vines before dozing off-perhaps this means it's especially relaxed.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/venusaur_original.png'),
+    imageSrcShiny: require('./assets/venusaur_shiny.png'),
   },
   [PokemonID.Charmander]: {
     name: 'Charmander',
@@ -288,8 +288,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/charmander_original.png'),
+    imageSrcShiny: require('./assets/charmander_shiny.png'),
   },
   [PokemonID.Charmeleon]: {
     name: 'Charmeleon',
@@ -320,8 +320,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/charmeleon_original.png'),
+    imageSrcShiny: require('./assets/charmeleon_shiny.png'),
   },
   [PokemonID.Charizard]: {
     name: 'Charizard',
@@ -345,8 +345,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1116,
     description:
       "It's been seen looking amazingly relaxed as it nods off, perhaps because it's so confident in its might. The Charizard that you occasionally see sleeping flat on their backs may be particularly strong.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/charizard_original.png'),
+    imageSrcShiny: require('./assets/charizard_shiny.png'),
   },
   [PokemonID.Squirtle]: {
     name: 'Squirtle',
@@ -377,8 +377,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/squirtle_original.png'),
+    imageSrcShiny: require('./assets/squirtle_shiny.png'),
   },
   [PokemonID.Wartortle]: {
     name: 'Wartortle',
@@ -409,8 +409,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/wartortle_original.png'),
+    imageSrcShiny: require('./assets/wartortle_shiny.png'),
   },
   [PokemonID.Blastoise]: {
     name: 'Blastoise',
@@ -434,8 +434,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1116,
     description:
       "This Pokémon normally sleeps soundly, protected by its tough shell, but it's also been seen sleeping with its belly exposed on very rare occasions. Perhaps this happens when Blastoise feels completely secure in its surroundings and falls fast asleep.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/blastoise_original.png'),
+    imageSrcShiny: require('./assets/blastoise_shiny.png'),
   },
   [PokemonID.Caterpie]: {
     name: 'Caterpie',
@@ -466,8 +466,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/caterpie_original.png'),
+    imageSrcShiny: require('./assets/caterpie_shiny.png'),
   },
   [PokemonID.Metapod]: {
     name: 'Metapod',
@@ -498,8 +498,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/metapod_original.png'),
+    imageSrcShiny: require('./assets/metapod_shiny.png'),
   },
   [PokemonID.Butterfree]: {
     name: 'Butterfree',
@@ -523,8 +523,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 715,
     description:
       'Apparently, it sometimes inadvertently scatters highly toxic dust as it sleeps. Maybe it relaxes its control when it flaps its wings while asleep.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/butterfree_original.png'),
+    imageSrcShiny: require('./assets/butterfree_shiny.png'),
   },
   [PokemonID.Rattata]: {
     name: 'Rattata',
@@ -555,8 +555,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/rattata_original.png'),
+    imageSrcShiny: require('./assets/rattata_shiny.png'),
   },
   [PokemonID.Raticate]: {
     name: 'Raticate',
@@ -580,8 +580,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 155,
     description:
       'Its sturdy fangs grow steadily, so it grinds its teeth even in its sleep to keep them trimmed. But this may not always be enough-Raticate apparently also gnaws on trees in its sleep sometimes.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/raticate_original.png'),
+    imageSrcShiny: require('./assets/raticate_shiny.png'),
   },
   [PokemonID.Ekans]: {
     name: 'Ekans',
@@ -612,8 +612,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/ekans_original.png'),
+    imageSrcShiny: require('./assets/ekans_shiny.png'),
   },
   [PokemonID.Arbok]: {
     name: 'Arbok',
@@ -637,8 +637,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 268,
     description:
       "It's been seen displaying its belly while sleeping. Perhaps Arbok is showing its fearsome markings on purpose to keep other Pokémon from coming near it.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/arbok_original.png'),
+    imageSrcShiny: require('./assets/arbok_shiny.png'),
   },
   [PokemonID.Pikachu]: {
     name: 'Pikachu',
@@ -669,8 +669,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/pikachu_original.png'),
+    imageSrcShiny: require('./assets/pikachu_shiny.png'),
   },
   [PokemonID.Raichu]: {
     name: 'Raichu',
@@ -694,8 +694,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 844,
     description:
       'Apparently, it sometimes sleeps while discharging electricity, its long tail planted like a grounding rod. Take care not to get electrocuted if you approach it!',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/raichu_original.png'),
+    imageSrcShiny: require('./assets/raichu_shiny.png'),
   },
   [PokemonID.Clefairy]: {
     name: 'Clefairy',
@@ -726,8 +726,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/clefairy_original.png'),
+    imageSrcShiny: require('./assets/clefairy_shiny.png'),
   },
   [PokemonID.Clefable]: {
     name: 'Clefable',
@@ -751,8 +751,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 847,
     description:
       "It is said to sleep in remote places on quiet, moonlit nights. Perhaps it's dreaming about its friends in its distant homeland as it peacefully sleeps.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/clefable_original.png'),
+    imageSrcShiny: require('./assets/clefable_shiny.png'),
   },
   [PokemonID.Jigglypuff]: {
     name: 'Jigglypuff',
@@ -783,8 +783,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/jigglypuff_original.png'),
+    imageSrcShiny: require('./assets/jigglypuff_shiny.png'),
   },
   [PokemonID.Wigglytuff]: {
     name: 'Wigglytuff',
@@ -808,8 +808,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 273,
     description:
       'Its fine fur has a sublime texture. Wigglytuff has even been seen stroking its belly while fast asleep- perhaps this fur feels nice even to its own touch.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/wigglytuff_original.png'),
+    imageSrcShiny: require('./assets/wigglytuff_shiny.png'),
   },
   [PokemonID.Diglett]: {
     name: 'Diglett',
@@ -840,8 +840,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/diglett_original.png'),
+    imageSrcShiny: require('./assets/diglett_shiny.png'),
   },
   [PokemonID.Dugtrio]: {
     name: 'Dugtrio',
@@ -865,8 +865,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 284,
     description:
       'These triplets never get separated and they sleep all together. Their teamwork as a trio stays steadfast even when they sleep.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/dugtrio_original.png'),
+    imageSrcShiny: require('./assets/dugtrio_shiny.png'),
   },
   [PokemonID.Meowth]: {
     name: 'Meowth',
@@ -893,8 +893,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/meowth_original.png'),
+    imageSrcShiny: require('./assets/meowth_shiny.png'),
   },
   [PokemonID.Persian]: {
     name: 'Persian',
@@ -914,8 +914,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 245,
     description:
       "Even when asleep, Persian's haughtiness is striking. It appears to clean its face and groom itself even as it sleeps, stretching its lithe body with ease.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/persian_original.png'),
+    imageSrcShiny: require('./assets/persian_shiny.png'),
   },
   [PokemonID.Psyduck]: {
     name: 'Psyduck',
@@ -946,8 +946,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/psyduck_original.png'),
+    imageSrcShiny: require('./assets/psyduck_shiny.png'),
   },
   [PokemonID.Golduck]: {
     name: 'Golduck',
@@ -971,8 +971,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 227,
     description:
       "The best swimmer among Pokémon, Golduck has been seen languidly paddling its webbed limbs as it sleeps. Perhaps it's swimming in its dreams.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/golduck_original.png'),
+    imageSrcShiny: require('./assets/golduck_shiny.png'),
   },
   [PokemonID.Mankey]: {
     name: 'Mankey',
@@ -1003,8 +1003,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/mankey_original.png'),
+    imageSrcShiny: require('./assets/mankey_shiny.png'),
   },
   [PokemonID.Primeape]: {
     name: 'Primeape',
@@ -1028,8 +1028,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 245,
     description:
       'The ever-angry Primeape rages even in its sleep. It apparently sleeps free from anger on very rare occasions, perhaps when it has exhausted itself.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/primeape_original.png'),
+    imageSrcShiny: require('./assets/primeape_shiny.png'),
   },
   [PokemonID.Growlithe]: {
     name: 'Growlithe',
@@ -1060,8 +1060,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/growlithe_original.png'),
+    imageSrcShiny: require('./assets/growlithe_shiny.png'),
   },
   [PokemonID.Arcanine]: {
     name: 'Arcanine',
@@ -1085,8 +1085,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1199,
     description:
       "When it feels it has found a supremely comfortable sleeping spot, Arcanine apparently sleeps just like an innocent child-though you'd never expect the pose given Arcanine's usual proud and regal appearance.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/arcanine_original.png'),
+    imageSrcShiny: require('./assets/arcanine_shiny.png'),
   },
   [PokemonID.Bellsprout]: {
     name: 'Bellsprout',
@@ -1117,8 +1117,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/bellsprout_original.png'),
+    imageSrcShiny: require('./assets/bellsprout_shiny.png'),
   },
   [PokemonID.Weepinbell]: {
     name: 'Weepinbell',
@@ -1149,8 +1149,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/weepinbell_original.png'),
+    imageSrcShiny: require('./assets/weepinbell_shiny.png'),
   },
   [PokemonID.Victreebel]: {
     name: 'Victreebel',
@@ -1174,8 +1174,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 715,
     description:
       'Even while asleep, it appears that Victreebel opens its mouth wide to attract prey with the nectar-like acid within it. On very rare occasions, it seems to forget about luring in prey and instead sleeps face down.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/victreebel_original.png'),
+    imageSrcShiny: require('./assets/victreebel_shiny.png'),
   },
   [PokemonID.Geodude]: {
     name: 'Geodude',
@@ -1206,8 +1206,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/geodude_original.png'),
+    imageSrcShiny: require('./assets/geodude_shiny.png'),
   },
   [PokemonID.Graveler]: {
     name: 'Graveler',
@@ -1238,8 +1238,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/graveler_original.png'),
+    imageSrcShiny: require('./assets/graveler_shiny.png'),
   },
   [PokemonID.Golem]: {
     name: 'Golem',
@@ -1263,8 +1263,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1033,
     description:
       "Apparently, Golem sleeps upside down sometimes, perhaps because it wants to rock itself into a deep sleep, as if it's in a cradle. There's a chance it might roll into you, so it seems best to stay clear.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/golem_original.png'),
+    imageSrcShiny: require('./assets/golem_shiny.png'),
   },
   [PokemonID.Slowpoke]: {
     name: 'Slowpoke',
@@ -1300,8 +1300,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/slowpoke_original.png'),
+    imageSrcShiny: require('./assets/slowpoke_shiny.png'),
   },
   [PokemonID.Slowbro]: {
     name: 'Slowbro',
@@ -1325,8 +1325,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 209,
     description:
       'Slowbro mostly sleeps at the same time as the Shellder biting its tail. Once in a while, though, Slowbro has been found sleeping with the Shellder still awake.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/slowbro_original.png'),
+    imageSrcShiny: require('./assets/slowbro_shiny.png'),
   },
   [PokemonID.Magnemite]: {
     name: 'Magnemite',
@@ -1353,8 +1353,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/magnemite_original.png'),
+    imageSrcShiny: require('./assets/magnemite_shiny.png'),
   },
   [PokemonID.Magneton]: {
     name: 'Magneton',
@@ -1381,8 +1381,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/magneton_original.png'),
+    imageSrcShiny: require('./assets/magneton_shiny.png'),
   },
   [PokemonID.Doduo]: {
     name: 'Doduo',
@@ -1413,8 +1413,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/doduo_original.png'),
+    imageSrcShiny: require('./assets/doduo_shiny.png'),
   },
   [PokemonID.Dodrio]: {
     name: 'Dodrio',
@@ -1438,8 +1438,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 155,
     description:
       "Dodrio usually sleeps standing up, its three heads taking turns so that at least one is always awake. When Dodrio is truly exhausted, it seems even the head that's on watch duty may doze off.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/dodrio_original.png'),
+    imageSrcShiny: require('./assets/dodrio_shiny.png'),
   },
   [PokemonID.Gastly]: {
     name: 'Gastly',
@@ -1470,8 +1470,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/gastly_original.png'),
+    imageSrcShiny: require('./assets/gastly_shiny.png'),
   },
   [PokemonID.Haunter]: {
     name: 'Haunter',
@@ -1502,8 +1502,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/haunter_original.png'),
+    imageSrcShiny: require('./assets/haunter_shiny.png'),
   },
   [PokemonID.Gengar]: {
     name: 'Gengar',
@@ -1527,8 +1527,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1291,
     description:
       'If you feel a sudden chill, a Gengar may be sleeping close by. Apparently, it sometimes falls into a deep sleep while hiding in the shadow of a target it intends to curse.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/gengar_original.png'),
+    imageSrcShiny: require('./assets/gengar_shiny.png'),
   },
   [PokemonID.Cubone]: {
     name: 'Cubone',
@@ -1555,8 +1555,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/cubone_original.png'),
+    imageSrcShiny: require('./assets/cubone_shiny.png'),
   },
   [PokemonID.Marowak]: {
     name: 'Marowak',
@@ -1576,8 +1576,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 197,
     description:
       "It's been observed lovingly clutching its bone even in its sleep. You sometimes see Marowak sleeping with its bone as a pillow-perhaps this means the Pokémon feels at ease.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/marowak_original.png'),
+    imageSrcShiny: require('./assets/marowak_shiny.png'),
   },
   [PokemonID.Kangaskhan]: {
     name: 'Kangaskhan',
@@ -1601,8 +1601,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 449,
     description:
       "Kangaskhan protects its child by keeping it in its pouch, even while sleeping. If the child wakes before its mother and leaves the pouch to play, you'd best not approach it or you may end up in trouble with its mother.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/kangaskhan_original.png'),
+    imageSrcShiny: require('./assets/kangaskhan_shiny.png'),
   },
   [PokemonID.MrMime]: {
     name: 'Mr. Mime',
@@ -1626,8 +1626,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 284,
     description:
       "It is a master of pantomime. No one can tell if it's miming being asleep, or if it's actually asleep and pantomiming in its dreams.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/mrmime_original.png'),
+    imageSrcShiny: require('./assets/mrmime_shiny.png'),
   },
   [PokemonID.Pinsir]: {
     name: 'Pinsir',
@@ -1651,8 +1651,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 608,
     description:
       "Although it's tough, it can't handle cold well. On especially cold nights, it buries itself in the ground and sleeps. Apparently, its two impressive pincers always stick out aboveground when this happens.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/pinsir_original.png'),
+    imageSrcShiny: require('./assets/pinsir_shiny.png'),
   },
   [PokemonID.Ditto]: {
     name: 'Ditto',
@@ -1676,8 +1676,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 384,
     description:
       'There have been reports from around the world of Ditto falling asleep while still transformed into another Pokémon. Yet Ditto usually returns to normal when it relaxes, so this is a very rare sight.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/ditto_original.png'),
+    imageSrcShiny: require('./assets/ditto_shiny.png'),
   },
   [PokemonID.Eevee]: {
     name: 'Eevee',
@@ -1743,8 +1743,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/eevee_original.png'),
+    imageSrcShiny: require('./assets/eevee_shiny.png'),
   },
   [PokemonID.Vaporeon]: {
     name: 'Vaporeon',
@@ -1768,8 +1768,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 729,
     description:
       "Its body's cellular structure is similar to water's molecular composition, so it can melt invisibly in water. When Vaporeon sleeps on land, you can observe it as closely as you like.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/vaporeon_original.png'),
+    imageSrcShiny: require('./assets/vaporeon_shiny.png'),
   },
   [PokemonID.Jolteon]: {
     name: 'Jolteon',
@@ -1793,8 +1793,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1147,
     description:
       "If you quietly approach a sleeping Jolteon, you can hear the crackling sound of electricity as it exhales. When its fur stands on end, that's a sign it's about to give off a jolt of electricity-so get away quick!",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/jolteon_original.png'),
+    imageSrcShiny: require('./assets/jolteon_shiny.png'),
   },
   [PokemonID.Flareon]: {
     name: 'Flareon',
@@ -1818,8 +1818,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1147,
     description:
       "It sleeps contentedly wrapped in its fluffy fur, which releases heat into the air to cool down Flareon's body. Perhaps Flareon is regulating its body temperature even while sleeping.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/flareon_original.png'),
+    imageSrcShiny: require('./assets/flareon_shiny.png'),
   },
   [PokemonID.Chikorita]: {
     name: 'Chikorita',
@@ -1850,8 +1850,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/chikorita_original.png'),
+    imageSrcShiny: require('./assets/chikorita_shiny.png'),
   },
   [PokemonID.Bayleef]: {
     name: 'Bayleef',
@@ -1882,8 +1882,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/bayleef_original.png'),
+    imageSrcShiny: require('./assets/bayleef_shiny.png'),
   },
   [PokemonID.Meganium]: {
     name: 'Meganium',
@@ -1907,8 +1907,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1033,
     description:
       "The fragrance given off by its flower soothes and calms emotions. Fewer Pokémon fight around Meganium-you'll often even see them sleeping peacefully side-by-side.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/meganium_original.png'),
+    imageSrcShiny: require('./assets/meganium_shiny.png'),
   },
   [PokemonID.Cyndaquil]: {
     name: 'Cyndaquil',
@@ -1939,8 +1939,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/cyndaquil_original.png'),
+    imageSrcShiny: require('./assets/cyndaquil_shiny.png'),
   },
   [PokemonID.Quilava]: {
     name: 'Quilava',
@@ -1971,8 +1971,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/quilava_original.png'),
+    imageSrcShiny: require('./assets/quilava_shiny.png'),
   },
   [PokemonID.Typhlosion]: {
     name: 'Typhlosion',
@@ -1996,8 +1996,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1116,
     description:
       "It's said that when Typhlosion tosses and turns in its sleep, its fur rubs together and occasionally produces blasts of fire. Take care not to venture near a sleeping Typhlosion by accident!",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/typhlosion_original.png'),
+    imageSrcShiny: require('./assets/typhlosion_shiny.png'),
   },
   [PokemonID.Totodile]: {
     name: 'Totodile',
@@ -2024,8 +2024,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/totodile_original.png'),
+    imageSrcShiny: require('./assets/totodile_shiny.png'),
   },
   [PokemonID.Croconaw]: {
     name: 'Croconaw',
@@ -2052,8 +2052,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/croconaw_original.png'),
+    imageSrcShiny: require('./assets/croconaw_shiny.png'),
   },
   [PokemonID.Feraligatr]: {
     name: 'Feraligatr',
@@ -2073,8 +2073,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1033,
     description:
       'Feraligatr, too, is known to sleep by resting one brain hemisphere at a time. Be warned-it always keeps a vigilant eye on its surroundings and will rush at enemies as soon as it senses their presence.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/feraligatr_original.png'),
+    imageSrcShiny: require('./assets/feraligatr_shiny.png'),
   },
   [PokemonID.Pichu]: {
     name: 'Pichu',
@@ -2105,8 +2105,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 20,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/pichu_original.png'),
+    imageSrcShiny: require('./assets/pichu_shiny.png'),
   },
   [PokemonID.Cleffa]: {
     name: 'Cleffa',
@@ -2137,8 +2137,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 20,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/cleffa_original.png'),
+    imageSrcShiny: require('./assets/cleffa_shiny.png'),
   },
   [PokemonID.Igglybuff]: {
     name: 'Igglybuff',
@@ -2169,8 +2169,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 20,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/igglybuff_original.png'),
+    imageSrcShiny: require('./assets/igglybuff_shiny.png'),
   },
   [PokemonID.Togepi]: {
     name: 'Togepi',
@@ -2201,8 +2201,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 20,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/togepi_original.png'),
+    imageSrcShiny: require('./assets/togepi_shiny.png'),
   },
   [PokemonID.Togetic]: {
     name: 'Togetic',
@@ -2233,8 +2233,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/togetic_original.png'),
+    imageSrcShiny: require('./assets/togetic_shiny.png'),
   },
   [PokemonID.Mareep]: {
     name: 'Mareep',
@@ -2261,8 +2261,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/mareep_original.png'),
+    imageSrcShiny: require('./assets/mareep_shiny.png'),
   },
   [PokemonID.Flaaffy]: {
     name: 'Flaaffy',
@@ -2289,8 +2289,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/flaaffy_original.png'),
+    imageSrcShiny: require('./assets/flaaffy_shiny.png'),
   },
   [PokemonID.Ampharos]: {
     name: 'Ampharos',
@@ -2310,8 +2310,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 715,
     description:
       "The light from its tail can be seen from space. It's said that this Pokémon usually keeps the light off, but if you see a light shining far off in the distance at night, perhaps it's a soundly sleeping Ampharos.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/ampharos_original.png'),
+    imageSrcShiny: require('./assets/ampharos_shiny.png'),
   },
   [PokemonID.Sudowoodo]: {
     name: 'Sudowoodo',
@@ -2335,8 +2335,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 41,
     description:
       'It seems this Pokémon keeps up its tree mimicry in its sleep to avoid being attacked. But apparently, once in a long while, it lets itself go and sleeps laid out on the ground.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/sudowoodo_original.png'),
+    imageSrcShiny: require('./assets/sudowoodo_shiny.png'),
   },
   [PokemonID.Espeon]: {
     name: 'Espeon',
@@ -2360,8 +2360,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1147,
     description:
       "It bathes in the sunshine during the day and builds up psychic power in the orb on its forehead. It's said to be averse to battling at night, so it might be easier than you'd expect to come across an Espeon deep in sleep.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/espeon_original.png'),
+    imageSrcShiny: require('./assets/espeon_shiny.png'),
   },
   [PokemonID.Umbreon]: {
     name: 'Umbreon',
@@ -2385,8 +2385,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 894,
     description:
       "When exposed to the moon's aura at night, the rings on its body glow. It's said to be nocturnal, so it might be very difficult to find an Umbreon sleeping at night.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/umbreon_original.png'),
+    imageSrcShiny: require('./assets/umbreon_shiny.png'),
   },
   [PokemonID.Slowking]: {
     name: 'Slowking',
@@ -2410,8 +2410,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1103,
     description:
       "This Pokémon is called the Sage of the Sea. It's said that a Slowking's head is always brimming with world-changing ideas, even as it sleeps, but then it forgets them all upon waking.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/slowking_original.png'),
+    imageSrcShiny: require('./assets/slowking_shiny.png'),
   },
   [PokemonID.Wobbuffet]: {
     name: 'Wobbuffet',
@@ -2435,8 +2435,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 31,
     description:
       "It desperately tries to keep its black tail hidden. Though it keeps up the effort even while asleep, it's said that when Wobbuffet sleeps deeply and drops its guard, its tail can be seen on full display.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/wobbuffet_original.png'),
+    imageSrcShiny: require('./assets/wobbuffet_shiny.png'),
   },
   [PokemonID.Heracross]: {
     name: 'Heracross',
@@ -2456,8 +2456,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 515,
     description:
       'Heracross loves sweet sap and will scour whole forests for it. When the search is particularly hard, Heracross grows exhausted and may even end up nodding off while still licking the sap it finds.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/heracross_original.png'),
+    imageSrcShiny: require('./assets/heracross_shiny.png'),
   },
   [PokemonID.Houndour]: {
     name: 'Houndour',
@@ -2488,8 +2488,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/houndour_original.png'),
+    imageSrcShiny: require('./assets/houndour_shiny.png'),
   },
   [PokemonID.Houndoom]: {
     name: 'Houndoom',
@@ -2513,8 +2513,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 303,
     description:
       "Houndoom breathes flames when it's angry and, on rare occasions, when it's asleep. Perhaps it's dreaming of fighting other Houndoom to choose the leader of the pack.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/houndoom_original.png'),
+    imageSrcShiny: require('./assets/houndoom_shiny.png'),
   },
   [PokemonID.Larvitar]: {
     name: 'Larvitar',
@@ -2545,8 +2545,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/larvitar_original.png'),
+    imageSrcShiny: require('./assets/larvitar_shiny.png'),
   },
   [PokemonID.Pupitar]: {
     name: 'Pupitar',
@@ -2577,8 +2577,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 100,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/pupitar_original.png'),
+    imageSrcShiny: require('./assets/pupitar_shiny.png'),
   },
   [PokemonID.Tyranitar]: {
     name: 'Tyranitar',
@@ -2602,8 +2602,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 2578,
     description:
       "Tyranitar possesses both overwhelming power and a body that can't be harmed by any sort of attack. It takes no heed of its surroundings even in its sleep, so you can see it in a truly superb sleeping position with its limbs thrown wide.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/tyranitar_original.png'),
+    imageSrcShiny: require('./assets/tyranitar_shiny.png'),
   },
   [PokemonID.Slakoth]: {
     name: 'Slakoth',
@@ -2634,8 +2634,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/slakoth_original.png'),
+    imageSrcShiny: require('./assets/slakoth_shiny.png'),
   },
   [PokemonID.Vigoroth]: {
     name: 'Vigoroth',
@@ -2666,8 +2666,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/vigoroth_original.png'),
+    imageSrcShiny: require('./assets/vigoroth_shiny.png'),
   },
   [PokemonID.Slaking]: {
     name: 'Slaking',
@@ -2691,8 +2691,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1196,
     description:
       "It is the world's laziest Pokémon, spending all day lying down and lolling about. On very rare occasions you might even see a Slaking that dozed off while snacking on the grass around it.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/slaking_original.png'),
+    imageSrcShiny: require('./assets/slaking_shiny.png'),
   },
   [PokemonID.Sableye]: {
     name: 'Sableye',
@@ -2716,8 +2716,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 465,
     description:
       "Sableye feeds on gemstone crystals. You sometimes see it sleeping while fondly clutching the gemstones it has gathered. Perhaps it's dreaming of eating them until its belly is stuffed.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/sableye_original.png'),
+    imageSrcShiny: require('./assets/sableye_shiny.png'),
   },
   [PokemonID.Gulpin]: {
     name: 'Gulpin',
@@ -2748,8 +2748,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/gulpin_original.png'),
+    imageSrcShiny: require('./assets/gulpin_shiny.png'),
   },
   [PokemonID.Swalot]: {
     name: 'Swalot',
@@ -2773,8 +2773,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 170,
     description:
       "It sometimes falls asleep with its cavernous mouth wide open. Perhaps it's dreaming that it found a huge meal and is trying to swallow it whole.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/swalot_original.png'),
+    imageSrcShiny: require('./assets/swalot_shiny.png'),
   },
   [PokemonID.Swablu]: {
     name: 'Swablu',
@@ -2805,8 +2805,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/swablu_original.png'),
+    imageSrcShiny: require('./assets/swablu_shiny.png'),
   },
   [PokemonID.Altaria]: {
     name: 'Altaria',
@@ -2830,8 +2830,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 306,
     description:
       'It sleeps wrapped inside its wings, looking like a cottony cloud. Nestled within such soft, beautiful wings, the soundly snoozing Altaria may well be enjoying the most comfortable sleep ever.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/altaria_original.png'),
+    imageSrcShiny: require('./assets/altaria_shiny.png'),
   },
   [PokemonID.Absol]: {
     name: 'Absol',
@@ -2855,8 +2855,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 556,
     description:
       "Its curved, bow-like horn remains vigilant even while Absol sleeps. It's said that this Pokémon's ability to detect danger is strong even as it slumbers.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/absol_original.png'),
+    imageSrcShiny: require('./assets/absol_shiny.png'),
   },
   [PokemonID.Wynaut]: {
     name: 'Wynaut',
@@ -2887,8 +2887,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 20,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/wynaut_original.png'),
+    imageSrcShiny: require('./assets/wynaut_shiny.png'),
   },
   [PokemonID.Spheal]: {
     name: 'Spheal',
@@ -2919,8 +2919,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/spheal_original.png'),
+    imageSrcShiny: require('./assets/spheal_shiny.png'),
   },
   [PokemonID.Sealeo]: {
     name: 'Sealeo',
@@ -2951,8 +2951,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/sealeo_original.png'),
+    imageSrcShiny: require('./assets/sealeo_shiny.png'),
   },
   [PokemonID.Walrein]: {
     name: 'Walrein',
@@ -2976,8 +2976,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 586,
     description:
       'Its strong tusks shatter even large chunks of ice. Walrein has been found sleeping with a tusk stuck in the ground-as if perhaps the Pokémon fell asleep while tending to it.',
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/walrein_original.png'),
+    imageSrcShiny: require('./assets/walrein_shiny.png'),
   },
   [PokemonID.Bonsly]: {
     name: 'Bonsly',
@@ -3008,8 +3008,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 20,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/bonsly_original.png'),
+    imageSrcShiny: require('./assets/bonsly_shiny.png'),
   },
   [PokemonID.MimeJr]: {
     name: 'MimeJr',
@@ -3040,8 +3040,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 40,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/mimejr_original.png'),
+    imageSrcShiny: require('./assets/mimejr_shiny.png'),
   },
   [PokemonID.Riolu]: {
     name: 'Riolu',
@@ -3072,8 +3072,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         candies: 80,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/riolu_original.png'),
+    imageSrcShiny: require('./assets/riolu_shiny.png'),
   },
   [PokemonID.Lucario]: {
     name: 'Lucario',
@@ -3097,8 +3097,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1147,
     description:
       "It's said that Lucario hardly ever lowers its guard, even in its sleep. Perhaps it's still reading the aura emanating from others, just as it does when it's awake.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/lucario_original.png'),
+    imageSrcShiny: require('./assets/lucario_shiny.png'),
   },
   [PokemonID.Croagunk]: {
     name: 'Croagunk',
@@ -3123,8 +3123,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
         pokemon: PokemonID.Wartortle,
       },
     ],
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/croagunk_original.png'),
+    imageSrcShiny: require('./assets/croagunk_shiny.png'),
   },
   [PokemonID.Toxicroak]: {
     name: 'Toxicroak',
@@ -3144,8 +3144,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 227,
     description:
       "It sometimes uses the poison sac at its throat as a cushion while it sleeps. Be careful-Toxicroak may suddenly punch its fists out even when sleeping contentedly. Perhaps it's practicing its Poison Jab in its dreams.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/toxicroak_original.png'),
+    imageSrcShiny: require('./assets/toxicroak_shiny.png'),
   },
   [PokemonID.Magnezone]: {
     name: 'Magnezone',
@@ -3165,8 +3165,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1415,
     description:
       "Its screws and magnets spin even while it sleeps. It's said that a sleeping Magnezone emits signals of unknown purpose and receives signals of unknown origin, but researchers are divided on this point.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/magnezone_original.png'),
+    imageSrcShiny: require('./assets/magnezone_shiny.png'),
   },
   [PokemonID.Togekiss]: {
     name: 'Togekiss',
@@ -3190,8 +3190,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1300,
     description:
       "It's said that Togekiss is never seen anywhere near conflict or turmoil. If you ever see several of them sleeping contentedly, perhaps it's a sign that peace reigns in the area.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/togekiss_original.png'),
+    imageSrcShiny: require('./assets/togekiss_shiny.png'),
   },
   [PokemonID.Leafeon]: {
     name: 'Leafeon',
@@ -3215,8 +3215,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1147,
     description:
       "When you see Leafeon asleep in a patch of sunshine, you'll know it is using photosynthesis to produce clean air. Perhaps this nice, crisp air might help any Pokémon around Leafeon sleep deeply.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/leafeon_original.png'),
+    imageSrcShiny: require('./assets/leafeon_shiny.png'),
   },
   [PokemonID.Glaceon]: {
     name: 'Glaceon',
@@ -3240,8 +3240,8 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 1147,
     description:
       "At first glance it may look defenseless as it dozes, but look closer. Glaceon completely freezes its fur, making its hairs stand out like needles, so that it's protected from enemies even while it sleeps.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/glaceon_original.png'),
+    imageSrcShiny: require('./assets/glaceon_shiny.png'),
   },
   [PokemonID.Sylveon]: {
     name: 'Sylveon',
@@ -3265,7 +3265,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     recruitShards: 894,
     description:
       "It sends a soothing aura from its ribbonlike feelers. Trainers that sleep beside a Sylveon are likely get a great night's sleep every time they hit the hay.",
-    imageSrc: require('./assets/bulbasaur_original.png'),
-    imageSrcShiny: require('./assets/bulbasaur_shiny.png'),
+    imageSrc: require('./assets/sylveon_original.png'),
+    imageSrcShiny: require('./assets/sylveon_shiny.png'),
   },
 };
