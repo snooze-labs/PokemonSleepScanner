@@ -11,10 +11,12 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.PixelFormat;
 import android.graphics.Point;
+import android.os.Binder;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
@@ -25,10 +27,16 @@ import android.widget.ImageView;
 
 import androidx.core.util.Pair;
 
+import com.facebook.react.bridge.ReactContext;
+import com.facebook.react.modules.core.DeviceEventManagerModule;
+
 /**
  * Service for the floating scanner widget.
  */
 public class ScannerService extends Service {
+
+    private IBinder binder = new LocalBinder();
+    private IScannerServiceCallbacks scannerServiceCallbacks;
     private static final String INTENT_EXTRA_RESULT_CODE = "RESULT_CODE";
     private static final String INTENT_EXTRA_DATA = "DATA";
     private static final int MAX_TIME_FOR_CLICK_IN_MS = 300;
@@ -67,9 +75,19 @@ public class ScannerService extends Service {
         return START_NOT_STICKY;
     }
 
+    public class LocalBinder extends Binder {
+        ScannerService getService() {
+            return ScannerService.this;
+        }
+    }
+
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
+        return binder;
+    }
+
+    public void setCallbacks(IScannerServiceCallbacks callbacks) {
+        scannerServiceCallbacks = callbacks;
     }
 
     @Override
@@ -373,7 +391,10 @@ public class ScannerService extends Service {
         // hide the button, snapshot then show it again after
         floatingWidgetView.setVisibility(View.GONE);
         final Handler handler = new Handler();
-        handler.postDelayed(() -> camera.scan(() -> {
+        handler.postDelayed(() -> camera.scan((filePath) -> {
+            if (scannerServiceCallbacks != null) {
+                scannerServiceCallbacks.onScanComplete(filePath);
+            }
             new Handler(Looper.getMainLooper()).post(() -> {
                 floatingWidgetView.setVisibility(View.VISIBLE);
             });

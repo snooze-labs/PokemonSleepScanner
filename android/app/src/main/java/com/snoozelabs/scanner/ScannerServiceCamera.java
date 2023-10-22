@@ -133,6 +133,7 @@ public class ScannerServiceCamera {
      * Takes a snapshot of the current screen and saves it to disk.
      */
     public void scan(OnScanCompleteListener listener) {
+        String filePath = "";
         try (Image image = imageReader.acquireLatestImage()) {
             if (image != null) {
                 FileOutputStream fos = null;
@@ -150,7 +151,8 @@ public class ScannerServiceCamera {
                     bitmap.copyPixelsFromBuffer(buffer);
 
                     // write bitmap to a file
-                    fos = new FileOutputStream(storeDir + "/latest_scan.png");
+                    filePath = storeDir + "/latest_scan.png";
+                    fos = new FileOutputStream(filePath);
                     bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
 
                 } catch (FileNotFoundException e) {
@@ -173,7 +175,7 @@ public class ScannerServiceCamera {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        listener.onScanComplete();
+        listener.onScanComplete(filePath);
     }
 
 
@@ -214,5 +216,5 @@ public class ScannerServiceCamera {
 }
 
 interface OnScanCompleteListener {
-    void onScanComplete();
+    void onScanComplete(String filePath);
 }

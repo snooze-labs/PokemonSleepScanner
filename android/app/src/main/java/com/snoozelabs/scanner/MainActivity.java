@@ -1,12 +1,15 @@
 package com.snoozelabs.scanner;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.media.projection.MediaProjectionManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.provider.Settings;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -14,10 +17,16 @@ import androidx.activity.result.contract.ActivityResultContracts;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
+import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
 
-public class MainActivity extends ReactActivity {
+public class MainActivity extends ReactActivity implements IScannerServiceCallbacks {
+    private ScannerService scannerService;
+    private ScannerModule scannerModule;
+    private boolean isScannerServiceBound = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(null);
@@ -50,7 +59,8 @@ public class MainActivity extends ReactActivity {
     /**
      * Starts the scanner service.
      */
-    public void startScannerService() {
+    public void startScannerService(ScannerModule scannerModuleRef) {
+        scannerModule = scannerModuleRef;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (!Settings.canDrawOverlays(this)) {
                 Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
@@ -80,6 +90,21 @@ public class MainActivity extends ReactActivity {
                 }
             });
 
+    private ServiceConnection serviceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            ScannerService.LocalBinder binder = (ScannerService.LocalBinder) service;
+            scannerService = binder.getService();
+            isScannerServiceBound = true;
+            scannerService.setCallbacks(MainActivity.this);
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            isScannerServiceBound = false;
+        }
+    };
+
     /**
      * Handles the launch of the service (after permissions have been requested).
      */
@@ -89,7 +114,27 @@ public class MainActivity extends ReactActivity {
                 int resultCode = result.getResultCode();
                 if (resultCode == Activity.RESULT_OK) {
                     Intent data = result.getData();
-                    startService(ScannerService.getStartIntent(getApplicationContext(), resultCode, data));
+                    Intent scannerIntent = ScannerService.getStartIntent(getApplicationContext(), resultCode, data);
+                    startService(scannerIntent);
+                    bindService(scannerIntent, serviceConnection, Context.BIND_AUTO_CREATE);
                 }
             });
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (isScannerServiceBound) {
+            scannerService.setCallbacks(null);
+            scannerService.stopSelf();
+            unbindService(serviceConnection);
+            isScannerServiceBound = false;
+        }
+    }
+
+    @Override
+    public void onScanComplete(String filePath) {
+        WritableMap params = Arguments.createMap();
+        params.putString("filePath", filePath);
+        scannerModule.sendEvent(Events.SCAN_COMPLETED, params);
+    }
 }

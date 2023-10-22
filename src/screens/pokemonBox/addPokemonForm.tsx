@@ -3,9 +3,13 @@ import { View } from 'react-native';
 import { Button } from 'react-native-paper';
 import { ScreenNavigatorType } from '../../shell/routes';
 import { wrapNavigation } from '../../common/navigation';
-import { GlobalStateContext } from '../../globalStateContext';
+import { connect, ConnectedProps } from 'react-redux';
+import { Dispatch } from '@reduxjs/toolkit';
+import { IPokemon } from '../../common/store/types';
+import { addPokemonToInventory } from '../../common/store/pokemonSlice';
+import { PokemonID } from '../../gameData/pokemon/pokemon';
 
-interface IAddPokemonFormProps {}
+interface IAddPokemonFormProps extends PropsFromRedux {}
 
 /**
  * Form for adding a new pokemon.
@@ -16,23 +20,28 @@ class AddPokemonForm extends React.PureComponent<
   }
 > {
   render() {
-    const { navigation } = this.props;
+    const { navigation, addPokemonToInventory } = this.props;
     return (
       <View>
-        <GlobalStateContext.Consumer>
-          {({ setState }) => (
-            <Button
-              onPress={() => {
-                setState({ pokemonList: [{ id: 'bulbasaur' }] });
-                navigation.goBack();
-              }}>
-              Submit form
-            </Button>
-          )}
-        </GlobalStateContext.Consumer>
+        <Button
+          onPress={() => {
+            addPokemonToInventory({
+              speciesID: PokemonID.Bulbasaur,
+              level: 5,
+              subskills: [],
+            });
+            navigation.goBack();
+          }}>
+          Submit form
+        </Button>
       </View>
     );
   }
 }
 
-export default wrapNavigation(AddPokemonForm);
+const connector = connect(null, (dispatch: Dispatch) => ({
+  addPokemonToInventory: (pokemon: IPokemon) =>
+    dispatch(addPokemonToInventory(pokemon)),
+}));
+type PropsFromRedux = ConnectedProps<typeof connector>;
+export default wrapNavigation(connector(AddPokemonForm));

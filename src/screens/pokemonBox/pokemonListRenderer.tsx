@@ -1,17 +1,20 @@
 import * as React from 'react';
+import { connect, ConnectedProps } from 'react-redux';
 import { WorkInProgressPlaceholder } from '../../common/workInProgressPlaceholder';
-import { wrapState } from '../../common/state';
-import { MainApplicationStateSetter, IMainApplicationState } from '../../types';
+import { RootState } from '../../common/store/reduxStore';
 
-class PokemonListRenderer extends React.PureComponent<{
-  state: IMainApplicationState;
-  setState: MainApplicationStateSetter;
-}> {
+interface IPokemonListRendererProps extends PropsFromRedux {}
+
+class PokemonListRenderer extends React.PureComponent<IPokemonListRendererProps> {
   render() {
-    const { state } = this.props;
-    console.log('rendering: ', state);
+    const { pokemonInventory } = this.props;
+    console.log('rendering: ', pokemonInventory);
     return <WorkInProgressPlaceholder />;
   }
 }
 
-export default wrapState(PokemonListRenderer);
+const connector = connect((state: RootState) => ({
+  pokemonInventory: state.pokemon.pokemonInventory,
+}));
+type PropsFromRedux = ConnectedProps<typeof connector>;
+export default connector(PokemonListRenderer);

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import styles from './styles';
+import styles from './workInProgressPlaceholder.style';
 
 /**
  * Placeholder content.

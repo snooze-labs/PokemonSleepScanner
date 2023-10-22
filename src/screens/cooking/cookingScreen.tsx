@@ -24,10 +24,17 @@ import { Recipes } from '../../gameData/recipes/recipes';
 import { CurryRecipeID } from '../../gameData/recipes/curries/curries';
 import { DessertRecipeID } from '../../gameData/recipes/desserts/desserts';
 import { SaladRecipeID } from '../../gameData/recipes/salads/salads';
+import { connect, ConnectedProps } from 'react-redux';
+import { RootState } from '../../common/store/reduxStore';
+import { Dispatch } from '@reduxjs/toolkit';
+import {
+  clearIngredients,
+  updateIngredients,
+} from '../../common/store/cookingSlice';
+import { IngredientCounter } from '../../common/store/types';
 
-interface ICookingScreenProps {}
+interface ICookingScreenProps extends PropsFromRedux {}
 interface ICookingScreenState {
-  ingredients: { [key in IngredientID]?: number };
   recipeType?: RecipeType;
   potSize: number;
   isRecipeListVisible: boolean;
@@ -37,19 +44,18 @@ interface ICookingScreenState {
 /**
  * Screen for the cooking functionality.
  */
-export class CookingScreen extends React.PureComponent<
+class CookingScreen extends React.PureComponent<
   ICookingScreenProps,
   ICookingScreenState
 > {
   state: ICookingScreenState = {
-    ingredients: {},
     potSize: 999,
     isRecipeListVisible: false,
     isFloatingActionButtonMenuExpanded: false,
   };
 
   renderIngredientCounter(ingredientId: IngredientID) {
-    const { ingredients } = this.state;
+    const { ingredients, updateIngredients } = this.props;
     const count = ingredients[ingredientId] ?? 0;
     const ingredient = Ingredients[ingredientId];
     return (
@@ -74,9 +80,7 @@ export class CookingScreen extends React.PureComponent<
                 ...ingredients,
                 [ingredientId]: oldValue - 1,
               };
-              this.setState({
-                ingredients: updatedMap,
-              });
+              updateIngredients(updatedMap);
             }}
           />
           <Tooltip title={ingredient.name}>
@@ -106,9 +110,7 @@ export class CookingScreen extends React.PureComponent<
                   if (isNaN(num)) {
                     updatedMap[ingredientId] = 0;
                   }
-                  this.setState({
-                    ingredients: updatedMap,
-                  });
+                  updateIngredients(updatedMap);
                 }}
               />
             )}
@@ -122,9 +124,7 @@ export class CookingScreen extends React.PureComponent<
                 ...ingredients,
                 [ingredientId]: oldValue + 1,
               };
-              this.setState({
-                ingredients: updatedMap,
-              });
+              updateIngredients(updatedMap);
             }}
           />
         </View>
@@ -134,12 +134,12 @@ export class CookingScreen extends React.PureComponent<
 
   render() {
     const {
-      ingredients,
       recipeType,
       potSize,
       isRecipeListVisible,
       isFloatingActionButtonMenuExpanded,
     } = this.state;
+    const { ingredients, clearIngredients } = this.props;
     const ingredientIDs = Object.keys(Ingredients) as IngredientID[];
     return (
       <React.Fragment>
@@ -190,10 +190,7 @@ export class CookingScreen extends React.PureComponent<
                     {
                       icon: 'restart-alt',
                       label: 'Reset',
-                      onPress: () =>
-                        this.setState({
-                          ingredients: {},
-                        }),
+                      onPress: () => clearIngredients(),
                     },
                   ]}
                   onStateChange={({ open }) => {
@@ -371,3 +368,16 @@ export class CookingScreen extends React.PureComponent<
     );
   }
 }
+
+const connector = connect(
+  (state: RootState) => ({
+    ingredients: state.cooking.ingredients,
+  }),
+  (dispatch: Dispatch) => ({
+    updateIngredients: (ingredients: IngredientCounter) =>
+      dispatch(updateIngredients(ingredients)),
+    clearIngredients: () => dispatch(clearIngredients()),
+  }),
+);
+type PropsFromRedux = ConnectedProps<typeof connector>;
+export default connector(CookingScreen);
