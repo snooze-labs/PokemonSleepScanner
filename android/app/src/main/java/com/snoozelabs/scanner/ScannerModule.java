@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -50,6 +51,13 @@ public class ScannerModule extends ReactContextBaseJavaModule {
             // Spawn the Pokemon Sleep app and the overlay bubble at the same time
             activity.startScannerService(this);
         }
+        promise.resolve(true);
+    }
+
+    @ReactMethod
+    void showToast(String message, Promise promise) {
+        Toast toast = Toast.makeText(getReactApplicationContext(), message, Toast.LENGTH_SHORT);
+        toast.show();
         promise.resolve(true);
     }
 

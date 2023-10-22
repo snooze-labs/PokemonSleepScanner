@@ -9,6 +9,7 @@ import {
   TextRecognitionResult,
   TextBlock,
 } from '@react-native-ml-kit/text-recognition';
+import { NativeModules } from 'react-native';
 
 function extractCount(textBlock: TextBlock) {
   // the matcher can be flaky on the detection of the 'x' character
@@ -110,6 +111,12 @@ export function parseIngredients(result: TextRecognitionResult): ScanResult {
       const ingredient = extractText(labelRow.blocks[j]);
       ingredients[ingredientNameToIDMap[ingredient]] = count;
     }
+  }
+
+  if (Object.keys(ingredients).length > 0) {
+    NativeModules.Scanner.showToast('Found ingredients!');
+  } else {
+    NativeModules.Scanner.showToast('Scan failed...');
   }
 
   return {
