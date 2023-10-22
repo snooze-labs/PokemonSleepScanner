@@ -48,10 +48,6 @@ public class ScannerModule extends ReactContextBaseJavaModule {
         MainActivity activity = (MainActivity) getCurrentActivity();
         if (activity != null) {
             // Spawn the Pokemon Sleep app and the overlay bubble at the same time
-            Intent launchPokemonSleepIntent = activity.getPackageManager().getLaunchIntentForPackage("jp.pokemon.pokemonsleep");
-            if (launchPokemonSleepIntent != null) {
-                activity.startActivity(launchPokemonSleepIntent);
-            }
             activity.startScannerService(this);
         }
         promise.resolve(true);

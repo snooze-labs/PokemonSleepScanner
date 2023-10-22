@@ -260,7 +260,7 @@ public class ScannerService extends Service {
                         // If user drag and drop the floating widget view into the remove view then stop the service
                         if (inRemoveZone) {
                             floatingWidgetView.performHapticFeedback(HapticFeedbackConstants.CONFIRM);
-                            stopSelf();
+                            stopService();
                             return true;
                         }
 
@@ -414,5 +414,13 @@ public class ScannerService extends Service {
 
         // dispose the camera projection
         camera.stopProjection();
+    }
+
+    public void stopService() {
+        if (scannerServiceCallbacks != null) {
+            scannerServiceCallbacks.onDisposeService();
+        }
+        stopForeground(true);
+        super.stopSelf();
     }
 }

@@ -117,18 +117,28 @@ public class MainActivity extends ReactActivity implements IScannerServiceCallba
                     Intent scannerIntent = ScannerService.getStartIntent(getApplicationContext(), resultCode, data);
                     startService(scannerIntent);
                     bindService(scannerIntent, serviceConnection, Context.BIND_AUTO_CREATE);
+
+                    Intent launchPokemonSleepIntent = getPackageManager().getLaunchIntentForPackage("jp.pokemon.pokemonsleep");
+                    if (launchPokemonSleepIntent != null) {
+                        launchPokemonSleepIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(launchPokemonSleepIntent);
+                    }
                 }
             });
+
+    private void unbindService() {
+        if (isScannerServiceBound) {
+            scannerService.setCallbacks(null);
+            scannerService.stopService();
+            unbindService(serviceConnection);
+            isScannerServiceBound = false;
+        }
+    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (isScannerServiceBound) {
-            scannerService.setCallbacks(null);
-            scannerService.stopSelf();
-            unbindService(serviceConnection);
-            isScannerServiceBound = false;
-        }
+        unbindService();
     }
 
     @Override
@@ -136,5 +146,10 @@ public class MainActivity extends ReactActivity implements IScannerServiceCallba
         WritableMap params = Arguments.createMap();
         params.putString("filePath", filePath);
         scannerModule.sendEvent(Events.SCAN_COMPLETED, params);
+    }
+
+    @Override
+    public void onDisposeService() {
+        unbindService();
     }
 }

@@ -5,4 +5,5 @@ package com.snoozelabs.scanner;
  */
 public interface IScannerServiceCallbacks {
     void onScanComplete(String filePath);
+    void onDisposeService();
 }
