@@ -13,7 +13,10 @@ import { NativeModules } from 'react-native';
 
 function extractCount(textBlock: TextBlock) {
   // the matcher can be flaky on the detection of the 'x' character
-  const match = textBlock.text.match('[xX×](\\d+)');
+  let match = textBlock.text.match('[xX×](\\d+)');
+  if (!match) {
+    match = textBlock.text.match('\\d+\\/(\\d+)');
+  }
   if (match) {
     const result = parseInt(match[1]);
     if (!isNaN(result)) {
@@ -64,9 +67,19 @@ export function parseIngredients(result: TextRecognitionResult): ScanResult {
     return isValidBlock && !!block.frame;
   });
 
-  const sortedTextBlocksByTop = validTextBlocks.sort((a, b) => {
+  let sortedTextBlocksByTop = validTextBlocks.sort((a, b) => {
     return a.frame!.top - b.frame!.top;
   });
+
+  // remove the total count in the cooking page - it's generally very far away
+  // from the other elements and the first thing that appears
+  if (
+    sortedTextBlocksByTop.length > 1 &&
+    sortedTextBlocksByTop[1].frame!.top - sortedTextBlocksByTop[0].frame!.top >
+      300
+  ) {
+    sortedTextBlocksByTop = sortedTextBlocksByTop.slice(1);
+  }
 
   const rows: Array<{ isCounts: boolean; blocks: TextBlock[]; top: number }> =
     [];

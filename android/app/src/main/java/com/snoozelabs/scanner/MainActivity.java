@@ -151,5 +151,9 @@ public class MainActivity extends ReactActivity implements IScannerServiceCallba
     @Override
     public void onDisposeService() {
         unbindService();
+        Intent i = new Intent(this, MainActivity.class);
+        i.setAction(Intent.ACTION_MAIN);
+        i.addCategory(Intent.CATEGORY_LAUNCHER);
+        startActivity(i);
     }
 }
