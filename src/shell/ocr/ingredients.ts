@@ -81,8 +81,7 @@ export function parseIngredients(result: TextRecognitionResult): ScanResult {
     sortedTextBlocksByTop = sortedTextBlocksByTop.slice(1);
   }
 
-  const rows: Array<{ isCounts: boolean; blocks: TextBlock[]; top: number }> =
-    [];
+  let rows: Array<{ isCounts: boolean; blocks: TextBlock[]; top: number }> = [];
   let currentRow: TextBlock[] = [];
   let currentTop = -1;
 
@@ -98,6 +97,11 @@ export function parseIngredients(result: TextRecognitionResult): ScanResult {
     } else {
       currentRow.push(block);
     }
+  }
+
+  // make sure we're starting with counts in case of partial results
+  if (rows.length > 0 && !rows[0].isCounts) {
+    rows = rows.slice(1);
   }
 
   for (let i = 0; i < rows.length; i += 2) {
