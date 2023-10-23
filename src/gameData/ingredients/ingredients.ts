@@ -152,3 +152,10 @@ export const Ingredients: { [key in IngredientID]: IIngredientData } = {
     imageSrc: require('./assets/warmingginger.png'),
   },
 };
+
+/**
+ * Helper to get ingredient data by ID.
+ */
+export function getIngredientData(id: IngredientID) {
+  return Ingredients[id];
+}

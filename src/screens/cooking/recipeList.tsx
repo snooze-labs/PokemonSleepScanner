@@ -6,7 +6,7 @@ import {
   Ingredients,
 } from '../../gameData/ingredients/ingredients';
 import { Avatar, Card, Chip, Surface, Text } from 'react-native-paper';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import {
   ingredientsExceedPotSize,
   ingredientsSatisfied,
@@ -39,65 +39,58 @@ export class RecipeList extends React.PureComponent<
     const recipe = Recipes[recipeId];
     const ingredients = Object.keys(recipe.ingredients) as IngredientID[];
     return (
-      <Card style={{ width: 350 }}>
+      <Card style={styles.recipeCard}>
         <Card.Title
           title={`${recipe.name}`}
           titleVariant="titleMedium"
           subtitle={`Rank ${rank}`}
         />
         <Card.Content>
-          <View
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              gap: 10,
-            }}>
-            <Surface
-              elevation={1}
-              style={{
-                borderRadius: 20,
-                display: 'flex',
-                justifyContent: 'center',
-              }}>
-              <Image
-                style={{ height: 100, width: 100 }}
-                source={recipe.imageSrc}
-              />
+          <View style={styles.recipeCardRowContent}>
+            <Surface elevation={1} style={styles.recipeImageSurface}>
+              <Image style={styles.recipeImage} source={recipe.imageSrc} />
             </Surface>
             <View style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               <View style={{ display: 'flex', flexDirection: 'column' }}>
                 <Text variant="titleSmall">
                   Base Power: {recipe.strengthLevels[0]}
                 </Text>
-                {ingredients.length > 0 ? (
-                  ingredients.map(ingredientId => {
-                    const ingredient = Ingredients[ingredientId];
-                    return (
-                      <View
-                        key={ingredientId}
-                        style={{ display: 'flex', flexDirection: 'row' }}>
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                  }}>
+                  {ingredients.length > 0 ? (
+                    ingredients.map(ingredientId => {
+                      const ingredient = Ingredients[ingredientId];
+                      return (
                         <View
-                          style={{ display: 'flex', flexDirection: 'column' }}>
-                          <Chip
+                          key={ingredientId}
+                          style={{ display: 'flex', flexDirection: 'row' }}>
+                          <View
                             style={{
-                              margin: 5,
-                            }}
-                            avatar={
-                              <Avatar.Image
-                                size={24}
-                                source={ingredient.imageSrc}
-                              />
-                            }>
-                            {ingredient.name} x
-                            {recipe.ingredients[ingredientId]}
-                          </Chip>
+                              display: 'flex',
+                              flexDirection: 'column',
+                            }}>
+                            <Chip
+                              style={{ margin: 5 }}
+                              avatar={
+                                <Avatar.Image
+                                  size={24}
+                                  source={ingredient.imageSrc}
+                                />
+                              }>
+                              x{recipe.ingredients[ingredientId]}
+                            </Chip>
+                          </View>
                         </View>
-                      </View>
-                    );
-                  })
-                ) : (
-                  <Text>No ingredients needed</Text>
-                )}
+                      );
+                    })
+                  ) : (
+                    <Text>No ingredients needed</Text>
+                  )}
+                </View>
               </View>
             </View>
           </View>
@@ -153,3 +146,20 @@ export class RecipeList extends React.PureComponent<
     );
   }
 }
+
+const styles = StyleSheet.create({
+  recipeCard: {
+    width: 350,
+  },
+  recipeCardRowContent: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 10,
+  },
+  recipeImageSurface: {
+    borderRadius: 20,
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  recipeImage: { height: 100, width: 100 },
+});

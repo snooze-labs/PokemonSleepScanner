@@ -40,24 +40,6 @@ export enum PokemonSpecialty {
   Skills = 'Skills',
 }
 
-/**
- * Main skills.
- */
-export enum MainSkill {
-  ChargeStrengthS = 'ChargeStrengthS',
-  ChargeStrengthM = 'ChargeStrengthM',
-  DreamShardMagnetS = 'DreamShardMagnetS',
-  EnergizingCheerS = 'EnergizingCheerS',
-  ChargeStrengthVariableS = 'ChargeStrengthVariableS',
-  DreamShardMagnetVariableS = 'DreamShardMagnetVariableS',
-  ChargeEnergyS = 'ChargeEnergyS',
-  EnergyForEveryoneS = 'EnergyForEveryoneS',
-  ExtraHelpfulS = 'ExtraHelpfulS',
-  IngredientMagnetS = 'IngredientMagnetS',
-  CookingPowerUpS = 'CookingPowerUpS',
-  Metronome = 'Metronome',
-}
-
 type GrowToSize<T, N extends number, A extends T[]> = A['length'] extends N
   ? A
   : GrowToSize<T, N, [...A, T]>;

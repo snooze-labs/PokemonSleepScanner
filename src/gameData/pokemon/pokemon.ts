@@ -1,11 +1,11 @@
 import { IngredientID } from '../ingredients/ingredients';
 import {
   FixedArray,
-  MainSkill,
   PokemonSpecialty,
   PokemonType,
   SleepType,
 } from '../commonTypes';
+import { MainSkillID } from '../skills/mainSkills';
 import { ImageURISource } from 'react-native';
 
 /**
@@ -131,7 +131,7 @@ export interface IPokemonData {
   type: PokemonType;
   sleepType: SleepType;
   specialty: PokemonSpecialty;
-  mainSkill: MainSkill;
+  MainSkillID: MainSkillID;
   ingredients: FixedArray<IngredientID, 3> | FixedArray<IngredientID, 2>;
   baseFrequency: {
     hours: number;
@@ -175,7 +175,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.SoftPotato,
@@ -207,7 +207,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.SoftPotato,
@@ -239,7 +239,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.SoftPotato,
@@ -264,7 +264,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fire,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.WarmingGinger,
@@ -296,7 +296,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fire,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.WarmingGinger,
@@ -328,7 +328,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fire,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.WarmingGinger,
@@ -353,7 +353,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.MoomooMilk,
       IngredientID.SoothingCacao,
@@ -385,7 +385,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.MoomooMilk,
       IngredientID.SoothingCacao,
@@ -417,7 +417,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.MoomooMilk,
       IngredientID.SoothingCacao,
@@ -442,7 +442,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Bug,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.SnoozyTomato,
@@ -474,7 +474,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Bug,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.SnoozyTomato,
@@ -506,7 +506,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Bug,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.SnoozyTomato,
@@ -531,7 +531,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.GreengrassSoybeans,
@@ -563,7 +563,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.GreengrassSoybeans,
@@ -588,7 +588,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Poison,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.FancyEgg,
@@ -620,7 +620,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Poison,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.FancyEgg,
@@ -645,7 +645,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Electric,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.FancyEgg,
@@ -677,7 +677,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Electric,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.FancyEgg,
@@ -702,7 +702,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.Metronome,
+    MainSkillID: MainSkillID.Metronome,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.GreengrassSoybeans,
@@ -734,7 +734,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.Metronome,
+    MainSkillID: MainSkillID.Metronome,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.GreengrassSoybeans,
@@ -759,7 +759,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergyForEveryoneS,
+    MainSkillID: MainSkillID.EnergyForEveryoneS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.PureOil,
@@ -791,7 +791,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergyForEveryoneS,
+    MainSkillID: MainSkillID.EnergyForEveryoneS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.PureOil,
@@ -816,7 +816,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ground,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.SnoozyTomato,
       IngredientID.LargeLeek,
@@ -848,7 +848,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ground,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.SnoozyTomato,
       IngredientID.LargeLeek,
@@ -873,7 +873,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.DreamShardMagnetS,
+    MainSkillID: MainSkillID.DreamShardMagnetS,
     ingredients: [IngredientID.BeanSausage, IngredientID.MoomooMilk],
     baseFrequency: {
       hours: 1,
@@ -901,7 +901,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.DreamShardMagnetS,
+    MainSkillID: MainSkillID.DreamShardMagnetS,
     ingredients: [IngredientID.BeanSausage, IngredientID.MoomooMilk],
     baseFrequency: {
       hours: 0,
@@ -922,7 +922,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.FancyApple,
@@ -954,7 +954,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.FancyApple,
@@ -979,7 +979,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fighting,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.Honey,
@@ -1011,7 +1011,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fighting,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.Honey,
@@ -1036,7 +1036,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fire,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ExtraHelpfulS,
+    MainSkillID: MainSkillID.ExtraHelpfulS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.FieryHerb,
@@ -1068,7 +1068,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fire,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ExtraHelpfulS,
+    MainSkillID: MainSkillID.ExtraHelpfulS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.FieryHerb,
@@ -1093,7 +1093,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.LargeLeek,
       IngredientID.SnoozyTomato,
@@ -1125,7 +1125,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.LargeLeek,
       IngredientID.SnoozyTomato,
@@ -1157,7 +1157,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.LargeLeek,
       IngredientID.SnoozyTomato,
@@ -1182,7 +1182,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Rock,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.GreengrassSoybeans,
       IngredientID.SoftPotato,
@@ -1214,7 +1214,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Rock,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.GreengrassSoybeans,
       IngredientID.SoftPotato,
@@ -1246,7 +1246,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Rock,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.GreengrassSoybeans,
       IngredientID.SoftPotato,
@@ -1271,7 +1271,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergizingCheerS,
+    MainSkillID: MainSkillID.EnergizingCheerS,
     ingredients: [
       IngredientID.SlowpokeTail,
       IngredientID.SnoozyTomato,
@@ -1308,7 +1308,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergizingCheerS,
+    MainSkillID: MainSkillID.EnergizingCheerS,
     ingredients: [
       IngredientID.SlowpokeTail,
       IngredientID.SnoozyTomato,
@@ -1333,7 +1333,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Steel,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.CookingPowerUpS,
+    MainSkillID: MainSkillID.CookingPowerUpS,
     ingredients: [IngredientID.FieryHerb, IngredientID.PureOil],
     baseFrequency: {
       hours: 1,
@@ -1361,7 +1361,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Steel,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.CookingPowerUpS,
+    MainSkillID: MainSkillID.CookingPowerUpS,
     ingredients: [IngredientID.FieryHerb, IngredientID.PureOil],
     baseFrequency: {
       hours: 1,
@@ -1389,7 +1389,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Flying,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.GreengrassSoybeans,
@@ -1421,7 +1421,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Flying,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.GreengrassSoybeans,
@@ -1446,7 +1446,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ghost,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.FieryHerb,
       IngredientID.PureOil,
@@ -1478,7 +1478,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ghost,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.FieryHerb,
       IngredientID.PureOil,
@@ -1510,7 +1510,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ghost,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.FieryHerb,
       IngredientID.PureOil,
@@ -1535,7 +1535,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ground,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [IngredientID.SoothingCacao, IngredientID.WarmingGinger],
     baseFrequency: {
       hours: 1,
@@ -1563,7 +1563,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ground,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [IngredientID.SoothingCacao, IngredientID.WarmingGinger],
     baseFrequency: {
       hours: 0,
@@ -1584,7 +1584,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.GreengrassSoybeans,
       IngredientID.SoftPotato,
@@ -1609,7 +1609,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Psychic,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.LargeLeek,
       IngredientID.SnoozyTomato,
@@ -1634,7 +1634,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Bug,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.FancyApple,
@@ -1659,7 +1659,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.LargeLeek,
       IngredientID.PureOil,
@@ -1684,7 +1684,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.MoomooMilk,
@@ -1751,7 +1751,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.MoomooMilk,
@@ -1776,7 +1776,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Electric,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ExtraHelpfulS,
+    MainSkillID: MainSkillID.ExtraHelpfulS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.MoomooMilk,
@@ -1801,7 +1801,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fire,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.CookingPowerUpS,
+    MainSkillID: MainSkillID.CookingPowerUpS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.MoomooMilk,
@@ -1826,7 +1826,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.LargeLeek,
@@ -1858,7 +1858,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.LargeLeek,
@@ -1890,7 +1890,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.LargeLeek,
@@ -1915,7 +1915,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fire,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.FieryHerb,
       IngredientID.SoothingCacao,
@@ -1947,7 +1947,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fire,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.FieryHerb,
       IngredientID.SoothingCacao,
@@ -1979,7 +1979,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fire,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [
       IngredientID.FieryHerb,
       IngredientID.SoothingCacao,
@@ -2004,7 +2004,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [IngredientID.BeanSausage, IngredientID.PureOil],
     baseFrequency: {
       hours: 1,
@@ -2032,7 +2032,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [IngredientID.BeanSausage, IngredientID.PureOil],
     baseFrequency: {
       hours: 0,
@@ -2060,7 +2060,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthVariableS,
+    MainSkillID: MainSkillID.ChargeStrengthVariableS,
     ingredients: [IngredientID.BeanSausage, IngredientID.PureOil],
     baseFrequency: {
       hours: 0,
@@ -2081,7 +2081,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Electric,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.FancyEgg,
@@ -2113,7 +2113,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.Metronome,
+    MainSkillID: MainSkillID.Metronome,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.GreengrassSoybeans,
@@ -2145,7 +2145,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergyForEveryoneS,
+    MainSkillID: MainSkillID.EnergyForEveryoneS,
     ingredients: [
       IngredientID.Honey,
       IngredientID.PureOil,
@@ -2177,7 +2177,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.Metronome,
+    MainSkillID: MainSkillID.Metronome,
     ingredients: [
       IngredientID.FancyEgg,
       IngredientID.SoothingCacao,
@@ -2209,7 +2209,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.Metronome,
+    MainSkillID: MainSkillID.Metronome,
     ingredients: [
       IngredientID.FancyEgg,
       IngredientID.SoothingCacao,
@@ -2241,7 +2241,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Electric,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ChargeStrengthM,
+    MainSkillID: MainSkillID.ChargeStrengthM,
     ingredients: [IngredientID.FancyEgg, IngredientID.FieryHerb],
     baseFrequency: {
       hours: 1,
@@ -2269,7 +2269,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Electric,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ChargeStrengthM,
+    MainSkillID: MainSkillID.ChargeStrengthM,
     ingredients: [IngredientID.FancyEgg, IngredientID.FieryHerb],
     baseFrequency: {
       hours: 0,
@@ -2297,7 +2297,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Electric,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ChargeStrengthM,
+    MainSkillID: MainSkillID.ChargeStrengthM,
     ingredients: [IngredientID.FancyEgg, IngredientID.FieryHerb],
     baseFrequency: {
       hours: 0,
@@ -2318,7 +2318,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Rock,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ChargeStrengthM,
+    MainSkillID: MainSkillID.ChargeStrengthM,
     ingredients: [
       IngredientID.GreengrassSoybeans,
       IngredientID.SnoozyTomato,
@@ -2343,7 +2343,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Psychic,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ChargeStrengthM,
+    MainSkillID: MainSkillID.ChargeStrengthM,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.MoomooMilk,
@@ -2368,7 +2368,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Dark,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.MoomooMilk,
@@ -2393,7 +2393,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Water,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergizingCheerS,
+    MainSkillID: MainSkillID.EnergizingCheerS,
     ingredients: [
       IngredientID.SlowpokeTail,
       IngredientID.SoothingCacao,
@@ -2418,7 +2418,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Psychic,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergizingCheerS,
+    MainSkillID: MainSkillID.EnergizingCheerS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.PureOil,
@@ -2443,7 +2443,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Bug,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [IngredientID.Honey, IngredientID.TastyMushroom],
     baseFrequency: {
       hours: 0,
@@ -2464,7 +2464,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Dark,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.FieryHerb,
       IngredientID.LargeLeek,
@@ -2496,7 +2496,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Dark,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.FieryHerb,
       IngredientID.LargeLeek,
@@ -2521,7 +2521,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Rock,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.GreengrassSoybeans,
@@ -2553,7 +2553,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Rock,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.GreengrassSoybeans,
@@ -2585,7 +2585,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Dark,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.GreengrassSoybeans,
@@ -2610,7 +2610,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.Honey,
@@ -2642,7 +2642,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.Honey,
@@ -2674,7 +2674,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Normal,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.Honey,
@@ -2699,7 +2699,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Dark,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.PureOil,
       IngredientID.SoothingCacao,
@@ -2724,7 +2724,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Poison,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.DreamShardMagnetVariableS,
+    MainSkillID: MainSkillID.DreamShardMagnetVariableS,
     ingredients: [
       IngredientID.GreengrassSoybeans,
       IngredientID.Honey,
@@ -2756,7 +2756,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Poison,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.DreamShardMagnetVariableS,
+    MainSkillID: MainSkillID.DreamShardMagnetVariableS,
     ingredients: [
       IngredientID.GreengrassSoybeans,
       IngredientID.Honey,
@@ -2781,7 +2781,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Flying,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.FancyEgg,
@@ -2813,7 +2813,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Dragon,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.ChargeEnergyS,
+    MainSkillID: MainSkillID.ChargeEnergyS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.FancyEgg,
@@ -2838,7 +2838,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Dark,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.SoothingCacao,
@@ -2863,7 +2863,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Psychic,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergizingCheerS,
+    MainSkillID: MainSkillID.EnergizingCheerS,
     ingredients: [
       IngredientID.FancyApple,
       IngredientID.PureOil,
@@ -2895,7 +2895,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ice,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.PureOil,
@@ -2927,7 +2927,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ice,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.PureOil,
@@ -2959,7 +2959,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ice,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Berries,
-    mainSkill: MainSkill.IngredientMagnetS,
+    MainSkillID: MainSkillID.IngredientMagnetS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.PureOil,
@@ -2984,7 +2984,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Rock,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.ChargeStrengthM,
+    MainSkillID: MainSkillID.ChargeStrengthM,
     ingredients: [
       IngredientID.GreengrassSoybeans,
       IngredientID.SnoozyTomato,
@@ -3016,7 +3016,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Psychic,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [
       IngredientID.LargeLeek,
       IngredientID.SnoozyTomato,
@@ -3048,7 +3048,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fighting,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.DreamShardMagnetS,
+    MainSkillID: MainSkillID.DreamShardMagnetS,
     ingredients: [
       IngredientID.FancyEgg,
       IngredientID.PureOil,
@@ -3080,7 +3080,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fighting,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.DreamShardMagnetS,
+    MainSkillID: MainSkillID.DreamShardMagnetS,
     ingredients: [
       IngredientID.FancyEgg,
       IngredientID.PureOil,
@@ -3105,7 +3105,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Poison,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [IngredientID.BeanSausage, IngredientID.PureOil],
     baseFrequency: {
       hours: 1,
@@ -3131,7 +3131,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Poison,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Ingredients,
-    mainSkill: MainSkill.ChargeStrengthS,
+    MainSkillID: MainSkillID.ChargeStrengthS,
     ingredients: [IngredientID.BeanSausage, IngredientID.PureOil],
     baseFrequency: {
       hours: 0,
@@ -3152,7 +3152,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Steel,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.CookingPowerUpS,
+    MainSkillID: MainSkillID.CookingPowerUpS,
     ingredients: [IngredientID.FieryHerb, IngredientID.PureOil],
     baseFrequency: {
       hours: 0,
@@ -3173,7 +3173,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.Metronome,
+    MainSkillID: MainSkillID.Metronome,
     ingredients: [
       IngredientID.FancyEgg,
       IngredientID.SoothingCacao,
@@ -3198,7 +3198,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Grass,
     sleepType: SleepType.Dozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergizingCheerS,
+    MainSkillID: MainSkillID.EnergizingCheerS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.MoomooMilk,
@@ -3223,7 +3223,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Ice,
     sleepType: SleepType.Slumbering,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.CookingPowerUpS,
+    MainSkillID: MainSkillID.CookingPowerUpS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.MoomooMilk,
@@ -3248,7 +3248,7 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     type: PokemonType.Fairy,
     sleepType: SleepType.Snoozing,
     specialty: PokemonSpecialty.Skills,
-    mainSkill: MainSkill.EnergyForEveryoneS,
+    MainSkillID: MainSkillID.EnergyForEveryoneS,
     ingredients: [
       IngredientID.BeanSausage,
       IngredientID.MoomooMilk,
@@ -3269,3 +3269,10 @@ export const Pokemon: { [key in PokemonID]: IPokemonData } = {
     imageSrcShiny: require('./assets/sylveon_shiny.png'),
   },
 };
+
+/**
+ * Helper to get Pokemon data by ID.
+ */
+export function getPokemonData(id: PokemonID) {
+  return Pokemon[id];
+}

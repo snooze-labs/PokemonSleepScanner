@@ -53,3 +53,10 @@ export const ResearchAreas: { [key in ResearchAreaID]: IResearchAreaData } = {
     imageSrc: require('./assets/snowdroptundra.jpg'),
   },
 };
+
+/**
+ * Helper to get research area data by ID.
+ */
+export function getResearchData(id: ResearchAreaID) {
+  return ResearchAreas[id];
+}

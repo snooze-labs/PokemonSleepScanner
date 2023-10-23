@@ -18,3 +18,10 @@ export const Recipes: {
   ...DessertRecipes,
   ...SaladRecipes,
 };
+
+/**
+ * Helper to get recipe data by ID.
+ */
+export function getRecipeData(id: RecipeID) {
+  return Recipes[id];
+}

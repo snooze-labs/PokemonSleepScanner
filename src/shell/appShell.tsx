@@ -33,6 +33,7 @@ import { connect, ConnectedProps } from 'react-redux';
 import { Dispatch } from '@reduxjs/toolkit';
 import { replaceIngredients } from '../common/store/cookingSlice';
 import { IngredientCounter } from '../common/store/types';
+import { initializeStore } from '../common/store/reduxStore';
 
 const navTheme = {
   ...DefaultTheme,
@@ -115,6 +116,9 @@ class AppShell extends React.PureComponent<IAppShellProps> {
   };
 
   componentDidMount(): void {
+    // initialize Redux store on mount
+    initializeStore(this.props.dispatch);
+
     this.eventListener = DeviceEventEmitter.addListener(
       NativeEventChannelID,
       (data: { type: NativeEvents; payload: any }) => {
@@ -155,6 +159,7 @@ class AppShell extends React.PureComponent<IAppShellProps> {
 const connector = connect(null, (dispatch: Dispatch) => ({
   replaceIngredients: (ingredients: IngredientCounter) =>
     dispatch(replaceIngredients(ingredients)),
+  dispatch,
 }));
 type PropsFromRedux = ConnectedProps<typeof connector>;
 export default connector(AppShell);

@@ -275,3 +275,10 @@ export const Berries: { [key in BerryID]: IBerryData } = {
     imageSrc: require('./assets/yacheberry.png'),
   },
 };
+
+/**
+ * Helper to get berry data by ID.
+ */
+export function getBerryData(id: BerryID) {
+  return Berries[id];
+}

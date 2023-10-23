@@ -1,11 +1,18 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { Dispatch, createSlice } from '@reduxjs/toolkit';
 import { IngredientCounter } from './types';
 import { IngredientID } from '../../gameData/ingredients/ingredients';
+import { PersistedData, getData, storeData } from '../asyncStorage';
+import { RecipeType } from '../../gameData/recipes/types';
 
+/**
+ * Redux slice related to cooking state.
+ */
 export const cookingSlice = createSlice({
   name: 'cooking',
   initialState: {
     ingredients: {} as IngredientCounter,
+    potSize: 999,
+    recipeType: null as RecipeType | null,
   },
   reducers: {
     updateIngredients: (state, { payload }: { payload: IngredientCounter }) => {
@@ -30,13 +37,37 @@ export const cookingSlice = createSlice({
         state.ingredients[key]! = payload[key]!;
       }
     },
+    updatePotSize: (state, { payload }: { payload: number }) => {
+      storeData(PersistedData.PotSize, payload);
+      state.potSize = payload;
+    },
+    updateRecipeType: (state, { payload }: { payload: RecipeType | null }) => {
+      storeData(PersistedData.RecipeType, payload);
+      state.recipeType = payload;
+    },
   },
 });
+
+/**
+ * Initializes the cooking state.
+ */
+export async function initialize(dispatch: Dispatch) {
+  const potSize = await getData(PersistedData.PotSize);
+  if (potSize != null) {
+    dispatch(updatePotSize(potSize));
+  }
+  const recipeType = await getData(PersistedData.RecipeType);
+  if (recipeType != null) {
+    dispatch(updateRecipeType(recipeType));
+  }
+}
 
 export const {
   updateIngredients,
   clearIngredients,
   addIngredients,
   replaceIngredients,
+  updatePotSize,
+  updateRecipeType,
 } = cookingSlice.actions;
 export default cookingSlice.reducer;

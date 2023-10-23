@@ -8,6 +8,7 @@ import { Dispatch } from '@reduxjs/toolkit';
 import { IPokemon } from '../../common/store/types';
 import { addPokemonToInventory } from '../../common/store/pokemonSlice';
 import { PokemonID } from '../../gameData/pokemon/pokemon';
+import { SubSkillID } from '../../gameData/skills/subSkills';
 
 interface IAddPokemonFormProps extends PropsFromRedux {}
 
@@ -28,7 +29,16 @@ class AddPokemonForm extends React.PureComponent<
             addPokemonToInventory({
               speciesID: PokemonID.Bulbasaur,
               level: 5,
-              subskills: [],
+              mainSkillLevel: 1,
+              subskills: [
+                SubSkillID.BerryFindingS,
+                SubSkillID.DreamShardBonus,
+                SubSkillID.EnergyRecoveryBonus,
+                SubSkillID.EnergyRecoveryM,
+                SubSkillID.EnergyRecoveryS,
+                SubSkillID.HelpingBonus,
+              ],
+              isShiny: true,
             });
             navigation.goBack();
           }}>

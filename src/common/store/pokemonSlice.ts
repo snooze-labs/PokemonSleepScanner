@@ -1,6 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { IPokemon } from './types';
 
+/**
+ * Redux slice related to Pokemon inventory state.
+ */
 export const pokemonSlice = createSlice({
   name: 'pokemon',
   initialState: {

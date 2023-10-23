@@ -3,7 +3,7 @@ import {
   IngredientID,
   Ingredients,
 } from '../../gameData/ingredients/ingredients';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import {
   Avatar,
   Button,
@@ -14,13 +14,12 @@ import {
   Surface,
   TextInput,
   TextInputProps,
-  Tooltip,
 } from 'react-native-paper';
 import TextInputMask from 'react-native-text-input-mask';
 import { RecipeList } from './recipeList';
 import { RecipeType } from '../../gameData/recipes/types';
 import { NativeModules, Modal } from 'react-native';
-import { Recipes } from '../../gameData/recipes/recipes';
+import { getRecipeData } from '../../gameData/recipes/recipes';
 import { CurryRecipeID } from '../../gameData/recipes/curries/curries';
 import { DessertRecipeID } from '../../gameData/recipes/desserts/desserts';
 import { SaladRecipeID } from '../../gameData/recipes/salads/salads';
@@ -30,13 +29,14 @@ import { Dispatch } from '@reduxjs/toolkit';
 import {
   clearIngredients,
   updateIngredients,
+  updatePotSize,
+  updateRecipeType,
 } from '../../common/store/cookingSlice';
 import { IngredientCounter } from '../../common/store/types';
+import { IngredientCountControl } from './ingredientCountControl';
 
 interface ICookingScreenProps extends PropsFromRedux {}
 interface ICookingScreenState {
-  recipeType?: RecipeType;
-  potSize: number;
   isRecipeListVisible: boolean;
   isFloatingActionButtonMenuExpanded: boolean;
 }
@@ -49,167 +49,161 @@ class CookingScreen extends React.PureComponent<
   ICookingScreenState
 > {
   state: ICookingScreenState = {
-    potSize: 999,
     isRecipeListVisible: false,
     isFloatingActionButtonMenuExpanded: false,
   };
 
-  renderIngredientCounter(ingredientId: IngredientID) {
-    const { ingredients, updateIngredients } = this.props;
-    const count = ingredients[ingredientId] ?? 0;
-    const ingredient = Ingredients[ingredientId];
+  renderFloatingActionButton() {
+    const { clearIngredients } = this.props;
+    const { isFloatingActionButtonMenuExpanded } = this.state;
     return (
-      <Surface
-        style={{
-          borderRadius: 20,
-        }}>
-        <View
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: 5,
-          }}>
-          <IconButton
-            icon="remove"
-            style={{ margin: 0 }}
-            disabled={!ingredients[ingredientId]}
-            onPress={() => {
-              const oldValue = ingredients[ingredientId] ?? 0;
-              const updatedMap = {
-                ...ingredients,
-                [ingredientId]: oldValue - 1,
-              };
-              updateIngredients(updatedMap);
-            }}
-          />
-          <Tooltip title={ingredient.name}>
-            <Avatar.Image
-              style={{ marginLeft: -5 }}
-              size={24}
-              source={ingredient.imageSrc}
+      <FAB.Group
+        open={isFloatingActionButtonMenuExpanded}
+        visible={true}
+        icon={isFloatingActionButtonMenuExpanded ? 'ramen-dining' : 'add'}
+        actions={[
+          {
+            icon: 'location-searching',
+            label: 'Scan',
+            onPress: () => NativeModules.Scanner.startOverlay(),
+          },
+          {
+            icon: 'restart-alt',
+            label: 'Reset',
+            onPress: () => clearIngredients(),
+          },
+        ]}
+        onStateChange={({ open }) => {
+          this.setState({
+            isFloatingActionButtonMenuExpanded: open,
+          });
+        }}
+      />
+    );
+  }
+
+  renderRecipeTypeChip(indicatorType: RecipeType) {
+    const { recipeType, updateRecipeType } = this.props;
+    const mixedRecipeData =
+      indicatorType === RecipeType.Curry
+        ? getRecipeData(CurryRecipeID.Mixed)
+        : indicatorType === RecipeType.Dessert
+        ? getRecipeData(DessertRecipeID.MixedJuice)
+        : getRecipeData(SaladRecipeID.MixedSalad);
+
+    const displayText =
+      indicatorType === RecipeType.Curry
+        ? 'Curries'
+        : indicatorType === RecipeType.Dessert
+        ? 'Desserts'
+        : 'Salads';
+
+    return (
+      <Chip
+        selected={recipeType === indicatorType}
+        elevation={recipeType === indicatorType ? 0 : 1}
+        style={styles.recipeTypeChip}
+        avatar={<Avatar.Image size={24} source={mixedRecipeData.imageSrc} />}
+        onPress={() =>
+          updateRecipeType(recipeType !== indicatorType ? indicatorType : null)
+        }>
+        {displayText}
+      </Chip>
+    );
+  }
+
+  renderRecipeModal() {
+    const { ingredients, potSize, recipeType } = this.props;
+    const { isRecipeListVisible } = this.state;
+    return (
+      <Modal presentationStyle="overFullScreen" visible={isRecipeListVisible}>
+        <Surface style={styles.modalLayout}>
+          <View style={styles.modalToolbar}>
+            <Button
+              icon="arrow-back"
+              style={styles.modalBackButton}
+              mode="contained"
+              onPress={() => {
+                this.setState({
+                  isRecipeListVisible: false,
+                });
+              }}>
+              Back
+            </Button>
+            <TextInput
+              label="Pot size"
+              value={String(potSize)}
+              underlineColor="transparent"
+              style={styles.potSizeField}
+              render={(renderProps: TextInputProps) => (
+                <TextInputMask
+                  {...renderProps}
+                  selectTextOnFocus={true}
+                  keyboardType={'numeric'}
+                  onChangeText={formatted => {
+                    const num = Number(formatted);
+                    if (!isNaN(num)) {
+                      updatePotSize(num);
+                    }
+                  }}
+                />
+              )}
             />
-          </Tooltip>
-          <TextInput
-            value={String(count)}
-            underlineColor="transparent"
-            style={{
-              alignSelf: 'center',
-              width: 50,
-              backgroundColor: 'transparent',
-              marginLeft: -5,
-            }}
-            render={(renderProps: TextInputProps) => (
-              <TextInputMask
-                {...renderProps}
-                selectTextOnFocus={true}
-                keyboardType={'numeric'}
-                onChangeText={formatted => {
-                  const num = Number(formatted);
-                  const updatedMap = { ...ingredients, [ingredientId]: num };
-                  if (isNaN(num)) {
-                    updatedMap[ingredientId] = 0;
-                  }
-                  updateIngredients(updatedMap);
-                }}
-              />
-            )}
-          />
-          <IconButton
-            icon="add"
-            style={{ margin: 0 }}
-            onPress={() => {
-              const oldValue = ingredients[ingredientId] ?? 0;
-              const updatedMap = {
-                ...ingredients,
-                [ingredientId]: oldValue + 1,
-              };
-              updateIngredients(updatedMap);
-            }}
-          />
+          </View>
+          <IconButton icon={'menu'} onPress={() => {}} />
+        </Surface>
+        <View style={styles.recipeTypeContainer}>
+          {[RecipeType.Curry, RecipeType.Dessert, RecipeType.Salad].map(
+            type => (
+              <React.Fragment key={type}>
+                {this.renderRecipeTypeChip(type)}
+              </React.Fragment>
+            ),
+          )}
         </View>
-      </Surface>
+        <RecipeList
+          ingredientConstraint={ingredients}
+          typeConstraint={recipeType ?? undefined}
+          potSizeConstraint={potSize}
+        />
+      </Modal>
     );
   }
 
   render() {
-    const {
-      recipeType,
-      potSize,
-      isRecipeListVisible,
-      isFloatingActionButtonMenuExpanded,
-    } = this.state;
-    const { ingredients, clearIngredients } = this.props;
+    const { ingredients, updateIngredients } = this.props;
     const ingredientIDs = Object.keys(Ingredients) as IngredientID[];
     return (
       <React.Fragment>
-        <View
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            height: '100%',
-          }}>
-          <View
-            style={{
-              flex: 1,
-            }}>
+        <View style={styles.mainLayout}>
+          <View style={styles.ingredientContentPane}>
             <ScrollView>
-              <View
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  flexWrap: 'wrap',
-                  gap: 20,
-                  padding: 20,
-                  justifyContent: 'center',
-                }}>
+              <View style={styles.ingredientCountGrid}>
                 {ingredientIDs.map(ingredientID => {
                   return (
-                    <React.Fragment key={ingredientID}>
-                      {this.renderIngredientCounter(ingredientID)}
-                    </React.Fragment>
+                    <IngredientCountControl
+                      key={ingredientID}
+                      ingredientID={ingredientID}
+                      count={ingredients[ingredientID] ?? 0}
+                      updateCount={count => {
+                        updateIngredients({
+                          ...ingredients,
+                          [ingredientID]: count,
+                        });
+                      }}
+                    />
                   );
                 })}
               </View>
             </ScrollView>
             <Portal.Host>
-              <Portal>
-                <FAB.Group
-                  open={isFloatingActionButtonMenuExpanded}
-                  visible={true}
-                  icon={
-                    isFloatingActionButtonMenuExpanded ? 'ramen-dining' : 'add'
-                  }
-                  actions={[
-                    {
-                      icon: 'location-searching',
-                      label: 'Scan',
-                      onPress: () => NativeModules.Scanner.startOverlay(),
-                    },
-                    {
-                      icon: 'restart-alt',
-                      label: 'Reset',
-                      onPress: () => clearIngredients(),
-                    },
-                  ]}
-                  onStateChange={({ open }) => {
-                    this.setState({
-                      isFloatingActionButtonMenuExpanded: open,
-                    });
-                  }}
-                />
-              </Portal>
+              <Portal>{this.renderFloatingActionButton()}</Portal>
             </Portal.Host>
           </View>
-          <Surface style={{ flexShrink: 0 }} elevation={5}>
+          <Surface style={styles.showRecipeButtonContainer} elevation={5}>
             <Button
               icon="soup-kitchen"
-              style={{
-                padding: 15,
-                margin: 20,
-                marginTop: 10,
-              }}
+              style={styles.showRecipeButton}
               mode="elevated"
               onPress={() => {
                 this.setState({
@@ -220,163 +214,86 @@ class CookingScreen extends React.PureComponent<
             </Button>
           </Surface>
         </View>
-        <Portal>
-          <Modal
-            presentationStyle="overFullScreen"
-            visible={isRecipeListVisible}>
-            <Surface
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                gap: 10,
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }}>
-              <View
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  gap: 10,
-                  alignItems: 'center',
-                }}>
-                <Button
-                  icon="arrow-back"
-                  style={{
-                    width: 80,
-                    marginLeft: 5,
-                  }}
-                  mode="contained"
-                  onPress={() => {
-                    this.setState({
-                      isRecipeListVisible: false,
-                    });
-                  }}>
-                  Back
-                </Button>
-                <TextInput
-                  label="Pot size"
-                  value={String(potSize)}
-                  underlineColor="transparent"
-                  style={{
-                    alignSelf: 'center',
-                    marginLeft: -5,
-                    backgroundColor: 'transparent',
-                    width: 50,
-                  }}
-                  render={(renderProps: TextInputProps) => (
-                    <TextInputMask
-                      {...renderProps}
-                      selectTextOnFocus={true}
-                      keyboardType={'numeric'}
-                      onChangeText={formatted => {
-                        const num = Number(formatted);
-                        if (!isNaN(num)) {
-                          this.setState({
-                            potSize: num,
-                          });
-                        }
-                      }}
-                    />
-                  )}
-                />
-              </View>
-              <IconButton icon={'menu'} onPress={() => {}} />
-            </Surface>
-            <View
-              style={{
-                alignSelf: 'center',
-                display: 'flex',
-                flexDirection: 'row',
-                gap: 10,
-                marginTop: 20,
-              }}>
-              <Chip
-                selected={recipeType === RecipeType.Curry}
-                elevation={recipeType === RecipeType.Curry ? 0 : 1}
-                style={{
-                  padding: 5,
-                }}
-                avatar={
-                  <Avatar.Image
-                    size={24}
-                    source={Recipes[CurryRecipeID.Mixed].imageSrc}
-                  />
-                }
-                onPress={() =>
-                  this.setState({
-                    recipeType:
-                      recipeType !== RecipeType.Curry
-                        ? RecipeType.Curry
-                        : undefined,
-                  })
-                }>
-                Curries
-              </Chip>
-              <Chip
-                selected={recipeType === RecipeType.Dessert}
-                elevation={recipeType === RecipeType.Dessert ? 0 : 1}
-                style={{
-                  padding: 5,
-                }}
-                avatar={
-                  <Avatar.Image
-                    size={24}
-                    source={Recipes[DessertRecipeID.MixedJuice].imageSrc}
-                  />
-                }
-                onPress={() =>
-                  this.setState({
-                    recipeType:
-                      recipeType !== RecipeType.Dessert
-                        ? RecipeType.Dessert
-                        : undefined,
-                  })
-                }>
-                Desserts
-              </Chip>
-              <Chip
-                selected={recipeType === RecipeType.Salad}
-                elevation={recipeType === RecipeType.Salad ? 0 : 1}
-                style={{
-                  padding: 5,
-                }}
-                avatar={
-                  <Avatar.Image
-                    size={24}
-                    source={Recipes[SaladRecipeID.MixedSalad].imageSrc}
-                  />
-                }
-                onPress={() =>
-                  this.setState({
-                    recipeType:
-                      recipeType !== RecipeType.Salad
-                        ? RecipeType.Salad
-                        : undefined,
-                  })
-                }>
-                Salads
-              </Chip>
-            </View>
-            <RecipeList
-              ingredientConstraint={ingredients}
-              typeConstraint={recipeType}
-              potSizeConstraint={potSize}
-            />
-          </Modal>
-        </Portal>
+        <Portal>{this.renderRecipeModal()}</Portal>
       </React.Fragment>
     );
   }
 }
 
+const styles = StyleSheet.create({
+  mainLayout: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: '100%',
+  },
+  ingredientContentPane: {
+    flex: 1,
+  },
+  ingredientCountGrid: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 20,
+    padding: 20,
+    justifyContent: 'center',
+  },
+  showRecipeButtonContainer: {
+    flexShrink: 0,
+  },
+  showRecipeButton: {
+    padding: 15,
+    margin: 20,
+    marginTop: 10,
+  },
+  modalLayout: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 10,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  modalBackButton: {
+    width: 80,
+    marginLeft: 5,
+  },
+  modalToolbar: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 10,
+    alignItems: 'center',
+  },
+  recipeTypeContainer: {
+    alignSelf: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 10,
+    marginTop: 20,
+  },
+  recipeTypeChip: {
+    padding: 5,
+  },
+  potSizeField: {
+    alignSelf: 'center',
+    marginLeft: -5,
+    backgroundColor: 'transparent',
+    width: 50,
+  },
+});
+
 const connector = connect(
   (state: RootState) => ({
     ingredients: state.cooking.ingredients,
+    potSize: state.cooking.potSize,
+    recipeType: state.cooking.recipeType,
   }),
   (dispatch: Dispatch) => ({
     updateIngredients: (ingredients: IngredientCounter) =>
       dispatch(updateIngredients(ingredients)),
     clearIngredients: () => dispatch(clearIngredients()),
+    updatePotSize: (potSize: number) => dispatch(updatePotSize(potSize)),
+    updateRecipeType: (recipeType: RecipeType | null) =>
+      dispatch(updateRecipeType(recipeType)),
   }),
 );
 type PropsFromRedux = ConnectedProps<typeof connector>;
