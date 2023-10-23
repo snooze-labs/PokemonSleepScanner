@@ -9,6 +9,8 @@ import { IPokemon } from '../../common/store/types';
 import { addPokemonToInventory } from '../../common/store/pokemonSlice';
 import { PokemonID } from '../../gameData/pokemon/pokemon';
 import { SubSkillID } from '../../gameData/skills/subSkills';
+import { NatureID } from '../../gameData/natures/natures';
+import { IngredientID } from '../../gameData/ingredients/ingredients';
 
 interface IAddPokemonFormProps extends PropsFromRedux {}
 
@@ -29,14 +31,19 @@ class AddPokemonForm extends React.PureComponent<
             addPokemonToInventory({
               speciesID: PokemonID.Bulbasaur,
               level: 5,
-              mainSkillLevel: 1,
+              baseMainSkillLevel: 1,
+              nature: NatureID.Adamant,
+              ingredients: [
+                IngredientID.Honey,
+                IngredientID.SoftPotato,
+                IngredientID.SnoozyTomato,
+              ],
               subskills: [
                 SubSkillID.BerryFindingS,
                 SubSkillID.DreamShardBonus,
                 SubSkillID.EnergyRecoveryBonus,
-                SubSkillID.EnergyRecoveryM,
-                SubSkillID.EnergyRecoveryS,
                 SubSkillID.HelpingBonus,
+                SubSkillID.HelpingSpeedM,
               ],
               isShiny: true,
             });
@@ -51,7 +58,7 @@ class AddPokemonForm extends React.PureComponent<
 
 const connector = connect(null, (dispatch: Dispatch) => ({
   addPokemonToInventory: (pokemon: IPokemon) =>
-    dispatch(addPokemonToInventory(pokemon)),
+    dispatch(addPokemonToInventory([pokemon])),
 }));
 type PropsFromRedux = ConnectedProps<typeof connector>;
 export default wrapNavigation(connector(AddPokemonForm));

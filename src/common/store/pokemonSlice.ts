@@ -10,8 +10,8 @@ export const pokemonSlice = createSlice({
     pokemonInventory: [] as IPokemon[],
   },
   reducers: {
-    addPokemonToInventory: (state, { payload }: { payload: IPokemon }) => {
-      state.pokemonInventory.push(payload);
+    addPokemonToInventory: (state, { payload }: { payload: IPokemon[] }) => {
+      state.pokemonInventory.concat(payload);
     },
     clearPokemonInventory: state => {
       state.pokemonInventory = [];

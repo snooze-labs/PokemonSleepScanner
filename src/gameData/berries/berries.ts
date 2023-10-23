@@ -282,3 +282,47 @@ export const Berries: { [key in BerryID]: IBerryData } = {
 export function getBerryData(id: BerryID) {
   return Berries[id];
 }
+
+/**
+ * Given a Pokemon type, returns the corresponding berry type.
+ */
+export function getBerryByPokemonType(pokemonType: PokemonType) {
+  switch (pokemonType) {
+    case PokemonType.Steel:
+      return BerryID.Belue;
+    case PokemonType.Ghost:
+      return BerryID.Bluk;
+    case PokemonType.Fighting:
+      return BerryID.Cheri;
+    case PokemonType.Poison:
+      return BerryID.Chesto;
+    case PokemonType.Grass:
+      return BerryID.Durin;
+    case PokemonType.Ground:
+      return BerryID.Figy;
+    case PokemonType.Electric:
+      return BerryID.Grepa;
+    case PokemonType.Fire:
+      return BerryID.Leppa;
+    case PokemonType.Bug:
+      return BerryID.Lum;
+    case PokemonType.Psychic:
+      return BerryID.Mago;
+    case PokemonType.Water:
+      return BerryID.Oran;
+    case PokemonType.Flying:
+      return BerryID.Pamtre;
+    case PokemonType.Fairy:
+      return BerryID.Pecha;
+    case PokemonType.Normal:
+      return BerryID.Persim;
+    case PokemonType.Ice:
+      return BerryID.Rawst;
+    case PokemonType.Rock:
+      return BerryID.Sitrus;
+    case PokemonType.Dark:
+      return BerryID.Wiki;
+    case PokemonType.Dragon:
+      return BerryID.Yache;
+  }
+}

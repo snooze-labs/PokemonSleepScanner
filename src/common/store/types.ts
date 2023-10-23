@@ -1,5 +1,6 @@
 import { FixedArray } from '../../gameData/commonTypes';
 import { IngredientID } from '../../gameData/ingredients/ingredients';
+import { NatureID } from '../../gameData/natures/natures';
 import { PokemonID } from '../../gameData/pokemon/pokemon';
 import { SubSkillID } from '../../gameData/skills/subSkills';
 
@@ -9,8 +10,10 @@ import { SubSkillID } from '../../gameData/skills/subSkills';
 export interface IPokemon {
   speciesID: PokemonID;
   level: number;
-  mainSkillLevel: number;
-  subskills: FixedArray<SubSkillID, 6>;
+  baseMainSkillLevel: number;
+  nature: NatureID;
+  ingredients: FixedArray<IngredientID, 3>;
+  subskills: FixedArray<SubSkillID, 5>;
   isShiny: boolean;
 }
 
