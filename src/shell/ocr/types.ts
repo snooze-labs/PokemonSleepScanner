@@ -12,5 +12,5 @@ export type ScanResult =
     }
   | {
       screen: TabbedScreen.PokemonBox;
-      pokemonAdded: IPokemon[];
+      pokemon: Partial<IPokemon>;
     };

@@ -32,8 +32,9 @@ import { getOCRResults } from './ocr/ocr';
 import { connect, ConnectedProps } from 'react-redux';
 import { Dispatch } from '@reduxjs/toolkit';
 import { replaceIngredients } from '../common/store/cookingSlice';
-import { IngredientCounter } from '../common/store/types';
+import { IPokemon, IngredientCounter } from '../common/store/types';
 import { initializeStore } from '../common/store/reduxStore';
+import { addPokemonToInventory } from '../common/store/pokemonSlice';
 
 const navTheme = {
   ...DefaultTheme,
@@ -108,9 +109,14 @@ class AppShell extends React.PureComponent<IAppShellProps> {
   private eventHandlers: INativeEventHandlerMap = {
     [NativeEvents.ScanCompleted]: async payload => {
       const results = await getOCRResults(payload.filePath);
-      if (results.screen === TabbedScreen.Cooking) {
-        this.props.replaceIngredients(results.ingredients);
-        this.navigationRef.current?.navigate(TabbedScreen.Cooking as any);
+      if (results) {
+        if (results.screen === TabbedScreen.Cooking) {
+          this.props.replaceIngredients(results.ingredients);
+          this.navigationRef.current?.navigate(TabbedScreen.Cooking as any);
+        } else if (results.screen === TabbedScreen.PokemonBox) {
+          // this.props.addPokemon(results.pokemon);
+          this.navigationRef.current?.navigate(TabbedScreen.PokemonBox as any);
+        }
       }
     },
   };
@@ -159,6 +165,7 @@ class AppShell extends React.PureComponent<IAppShellProps> {
 const connector = connect(null, (dispatch: Dispatch) => ({
   replaceIngredients: (ingredients: IngredientCounter) =>
     dispatch(replaceIngredients(ingredients)),
+  addPokemon: (pokemon: IPokemon) => dispatch(addPokemonToInventory([pokemon])),
   dispatch,
 }));
 type PropsFromRedux = ConnectedProps<typeof connector>;
